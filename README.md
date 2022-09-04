@@ -1,5 +1,7 @@
 # EasyVueUI
 
+Use EasyVueUI ui components to build web page easily (vue3 project)
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
