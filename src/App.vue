@@ -23,7 +23,7 @@
 					<EZGroup bg="#333" layout="vertical" padding="10px" width="50%">
 						<EZLabel color="white" size="3em">Test</EZLabel>
 						<EZCheckBoxGroup :items="['test1','test2','test3']" :onItemsSelect="onItemsSelect"></EZCheckBoxGroup>
-						<!-- <EZRadioBoxGroup :items="['test1','test2','test3']" :onItemsSelect="onItemsSelect2"></EZRadioBoxGroup> -->
+						<EZRadioBoxGroup :items="['test1','test2','test3']" :onItemsSelect="onItemsSelect2"></EZRadioBoxGroup>
 					</EZGroup>
 				</EZGroup>
 				<!-- contents -->

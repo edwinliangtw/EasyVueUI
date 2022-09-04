@@ -1,5 +1,5 @@
 <template>
-    <EZGroup class="ez-pointer" gap="3px" @click="onToggle(name, checked = !checked)">
+    <EZGroup class="ez-pointer" gap="3px" @click="onClick">
         <EZGroup bg="#333" :borderRadius="borderRadius" border="1px solid white" width="15px" height="15px" align="center">
             <EZLabel>
                 <template v-if="checked">
@@ -28,6 +28,11 @@ const props = defineProps({
 switch(props.type){
     case 'checkBox':borderRadius.value = '4px';break;
     case 'radioBox':borderRadius.value = '15px';break;
+}
+function onClick(){
+    if(props.type=='checkBox'){
+        props.onToggle(props.name, checked.value = !checked.value)
+    } else props.onToggle(props.name, checked.value = true)
 }
 </script>
 

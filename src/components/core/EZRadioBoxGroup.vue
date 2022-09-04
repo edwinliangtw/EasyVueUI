@@ -1,5 +1,5 @@
 <template>
-    <EZGroup layout="horizontal" gap="10px" @click="onItemsSelect(names)">
+    <EZGroup layout="horizontal" gap="10px" @click="onItemsSelect(selectedIndex)">
         <EZToggle v-for="(item, index) in items" type="radioBox" :name="'item_'+index" :onToggle="onToggle" :key="keys[index]">
             {{items[index]}}
         </EZToggle>
@@ -15,9 +15,11 @@ const props = defineProps({
     onItemsSelect: { type: Function, required: true },
 })
 const keys = ref(Array(props.items.length).fill(Math.random()))
+const selectedIndex = ref(-1)
 function onToggle(name, checked){
     if(checked){
         const index = parseInt(name.split('_')[1])
+        selectedIndex.value = index;
         keys.value.forEach((item,idx)=> idx != index && (keys.value[idx]=Math.random()))
     }
 }
