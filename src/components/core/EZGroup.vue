@@ -7,6 +7,7 @@ import { ref } from 'vue'
 let layoutSetting = ref('')
 let zIndexSetting = ref('')
 let marginAutoSetting = ref('')
+let alignSetting = ref('')
 const props = defineProps({
     position: { type: String, default: 'relative' },
     layout: { type: String, default: 'horizontal' },
@@ -23,6 +24,7 @@ const props = defineProps({
     borderRadius: {type: String, default: '0px' },
     shadow: {type: String, default: 'none'},
     marginAuto: {type: String, default: 'false'},
+    align: {type: String, default: 'none'},
 })
 switch(props.layout){
     case 'vertical': layoutSetting.value = 'column'; break;
@@ -34,6 +36,11 @@ switch(props.marginAuto){
 }
 switch(props.position){
     case 'absolute': zIndexSetting.value = '1'; break;
+}
+switch(props.align){
+    case 'start': alignSetting.value = 'flex-start'; break;
+    case 'center': alignSetting.value = 'center'; break;
+    case 'end': alignSetting.value = 'flex-end'; break;
 }
 </script>
 
@@ -59,5 +66,6 @@ switch(props.position){
     min-height: v-bind(minHeight);
     max-width: v-bind(maxWidth);
     z-index: v-bind(zIndexSetting);
+    align-self: v-bind(alignSetting);
 }
 </style>
