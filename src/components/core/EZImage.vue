@@ -26,7 +26,7 @@ heightSetting.value = props.height || '100px'
 srcSetting.value = '#333'
 if(props.src){
     let img = new Image
-    img.src = new URL('../../'+props.src,import.meta.url)
+    img.src = new URL('../../'+props.src,import.meta.url).href
     img.onload = ()=>{
         img.onload = null
         widthSetting.value = props.width || (img.naturalWidth+'px')
