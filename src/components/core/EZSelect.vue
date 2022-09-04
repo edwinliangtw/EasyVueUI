@@ -1,6 +1,6 @@
 <template>
-    <EZGroup layout="vertical">
-        <EZGroup class="ez-pointer" justify="space-between" @click="showSelection=true"  :width="width" :bg="bg" padding="5px">
+    <EZGroup layout="vertical" @mouseleave="addOutsideEvent()"  @mouseenter="removeOutsideEvent()">
+        <EZGroup class="ez-pointer" justify="space-between" @click="showSelection=true" :width="width" :bg="bg" padding="5px">
             <EZLabel color="white">{{title}}</EZLabel>
             <EZLabel color="white">
                 <template v-if="showSelection">▲</template>
@@ -23,11 +23,21 @@ import EZLabel from '@/components/core/EZLabel.vue'
 import EZButton from '@/components/core/EZButton.vue'
 import { ref } from 'vue'
 const showSelection = ref(false)
-const props = defineProps({
+defineProps({
     title: { type: String, default: 'please select:' },
     items: { type: Array, default: [] },
     onSelect: { type: Function, required: true },
     width: { type: String, default: '100px' },
     bg: { type: String, default: '#333' },
 })
+function close(){
+    showSelection.value = false;
+    document.body.removeEventListener('click', close)
+}
+function addOutsideEvent(){
+    document.body.addEventListener('click', close)
+}
+function removeOutsideEvent(){
+    document.body.removeEventListener('click', close)
+}
 </script>
