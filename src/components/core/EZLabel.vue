@@ -1,5 +1,5 @@
 <template>
-    <div><slot>Label</slot></div>
+    <div class="ez-label"><slot>Label</slot></div>
 </template>
 
 <script setup>
@@ -11,7 +11,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
-div {
+.ez-label {
     color: v-bind(color);
     font-size: v-bind(size);
     box-shadow: v-bind(shadow);

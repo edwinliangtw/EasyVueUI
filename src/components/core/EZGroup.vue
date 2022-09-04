@@ -1,12 +1,14 @@
 <template>
-    <div><slot></slot></div>
+    <div class="ez-group"><slot></slot></div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 let layoutSetting = ref('')
+let zIndexSetting = ref('')
 let marginAutoSetting = ref('')
 const props = defineProps({
+    position: { type: String, default: 'relative' },
     layout: { type: String, default: 'horizontal' },
     gap: {type: String, default: '0px'},
     justify : { type: String, default: 'none' },
@@ -30,15 +32,20 @@ switch(props.marginAuto){
     case 'false': marginAutoSetting.value = '0'; break;
     case 'true': marginAutoSetting.value = '0 auto'; break;
 }
+switch(props.position){
+    case 'absolute': zIndexSetting.value = '1'; break;
+}
 </script>
 
 <style scoped>
-div {
+.ez-group {
+    position: v-bind(position);
     display: inline-flex;
     gap: v-bind(gap);
     flex-direction: v-bind(layoutSetting);
     flex-wrap: no-wrap;
     justify-content: v-bind(justify);
+    align-items: v-bind(justify);
     box-sizing: border-box;
     width: v-bind(width);
     height: v-bind(height);
@@ -51,5 +58,6 @@ div {
     margin: v-bind(marginAutoSetting);
     min-height: v-bind(minHeight);
     max-width: v-bind(maxWidth);
+    z-index: v-bind(zIndexSetting);
 }
 </style>

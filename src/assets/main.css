@@ -5,3 +5,8 @@ body {
   padding: 0;
   margin: 0;
 }
+
+/** 滑鼠手勢指標 */
+.ez-pointer {
+  cursor: pointer;
+}

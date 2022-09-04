@@ -12,8 +12,9 @@
 			</EZGroup>
 			<EZGroup width="600px" layout="vertical" marginAuto="true">
 				<!-- banner -->
-				<EZGroup bg="#666" justify="center" padding="10px">
+				<EZGroup bg="#666" layout="vertical" justify="center" padding="10px">
 					<EZLabel color="white" size="3em">Banner</EZLabel>
+					<EZSelect width="200px" :items="['test1','test2','test3']" :onSelect="onSelect"/>
 				</EZGroup>
 				<!-- contents -->
 				<EZGroup layout="vertical" bg="#FFCC00" padding="10px">
@@ -36,4 +37,10 @@
 import EZGroup from '@/components/core/EZGroup.vue'
 import EZButton from '@/components/core/EZButton.vue'
 import EZLabel from '@/components/core/EZLabel.vue'
+import EZSelect from '@/components/core/EZSelect.vue'
+import { ref } from 'vue'
+// const title = ref('請選擇:')
+function onSelect(item, index) {
+	console.log(item, index)
+}
 </script>

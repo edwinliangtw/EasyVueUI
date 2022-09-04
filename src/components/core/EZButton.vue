@@ -1,5 +1,5 @@
 <template>
-    <div 
+    <div class="ez-button"
         @mouseenter="bgColor=bgOverColor"
         @mouseleave="bgColor=bgUpColor"
     ><EZLabel color="white"><slot>Button</slot></EZLabel></div>
@@ -31,7 +31,7 @@ switch(props.verticalAlign){
 </script>
 
 <style scoped>
-div {
+.ez-button {
     cursor: pointer;
     box-sizing: border-box;
     width: v-bind(width);
