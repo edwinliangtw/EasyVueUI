@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
     color:{ type: String, default: '#000000' },
     size: { type: String, default: '1em' },
     shadow: {type: String, default: 'none'},
