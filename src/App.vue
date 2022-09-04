@@ -12,12 +12,19 @@
 			</EZGroup>
 			<EZGroup width="600px" layout="vertical" marginAuto="true">
 				<!-- banner -->
-				<EZGroup bg="#666" layout="vertical" justify="center" padding="10px">
-					<EZLabel color="white" size="3em">Banner</EZLabel>
-					<EZSelect width="200px" :items="['test1','test2','test3']" :onSelect="onSelect"/>
-					<EZImage src="assets/img/appIcon.png" width="100px" height="100px" />
-					<EZToggle type="radioBox" name="myCheck" :onToggle="onToggle">radioBox test</EZToggle>
-					<EZToggle type="checkBox" name="myCheck2" :onToggle="onToggle">checkBox test</EZToggle>
+				<EZGroup layout="horizontal" justify="space-between">
+					<EZGroup bg="#666" layout="vertical" padding="10px" width="50%">
+						<EZLabel color="white" size="3em">Banner</EZLabel>
+						<EZSelect width="200px" :items="['test1','test2','test3']" :onSelect="onSelect"/>
+						<EZImage src="assets/img/appIcon.png" width="100px" height="100px" />
+						<EZToggle type="radioBox" name="myCheck" :onToggle="onToggle">radioBox test</EZToggle>
+						<EZToggle type="checkBox" name="myCheck2" :onToggle="onToggle">checkBox test</EZToggle>
+					</EZGroup>
+					<EZGroup bg="#333" layout="vertical" padding="10px" width="50%">
+						<EZLabel color="white" size="3em">Test</EZLabel>
+						<EZCheckBoxGroup :items="['test1','test2','test3']" :onItemsSelect="onItemsSelect"></EZCheckBoxGroup>
+						<!-- <EZRadioBoxGroup :items="['test1','test2','test3']" :onItemsSelect="onItemsSelect2"></EZRadioBoxGroup> -->
+					</EZGroup>
 				</EZGroup>
 				<!-- contents -->
 				<EZGroup layout="vertical" bg="#FFCC00" padding="10px">
@@ -43,11 +50,19 @@ import EZLabel from '@/components/core/EZLabel.vue'
 import EZSelect from '@/components/core/EZSelect.vue'
 import EZImage from '@/components/core/EZImage.vue'
 import EZToggle from '@/components/core/EZToggle.vue'
+import EZCheckBoxGroup from '@/components/core/EZCheckBoxGroup.vue'
+import EZRadioBoxGroup from '@/components/core/EZRadioBoxGroup.vue'
 import { ref } from 'vue'
 function onSelect(item, index) {
 	console.log(item, index)
 }
 function onToggle(name, checked) {
 	console.log(name, checked)
+}
+function onItemsSelect(checked){
+	console.log(checked)
+}
+function onItemsSelect2(checked){
+	console.log(checked)
 }
 </script>
