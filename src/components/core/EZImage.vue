@@ -10,6 +10,7 @@
 <script setup>
 import EZGroup from '@/components/core/EZGroup.vue'
 import { ref } from 'vue'
+let alignSetting = ref('')
 let widthSetting = ref('')
 let heightSetting = ref('')
 let srcSetting = ref('')
@@ -20,7 +21,13 @@ const props = defineProps({
     width: { type: String },
     height: { type: String },
     shadow: { type: String, default: 'none' },
+    align: {type: String, default: 'none'},
 })
+switch(props.align){
+    case 'start': alignSetting.value = 'flex-start'; break;
+    case 'center': alignSetting.value = 'center'; break;
+    case 'end': alignSetting.value = 'flex-end'; break;
+}
 widthSetting.value = props.width || '100px'
 heightSetting.value = props.height || '100px'
 srcSetting.value = '#333'
@@ -46,5 +53,6 @@ if(props.src){
     background: v-bind(srcSetting);
     background-size: 100%;
     box-shadow: v-bind(shadow);
+    align-self: v-bind(alignSetting);
 }
 </style>

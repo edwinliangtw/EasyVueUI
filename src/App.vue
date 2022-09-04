@@ -16,6 +16,7 @@
 					<EZLabel color="white" size="3em">Banner</EZLabel>
 					<EZSelect width="200px" :items="['test1','test2','test3']" :onSelect="onSelect"/>
 					<EZImage src="assets/img/appIcon.png" width="100px" height="100px" />
+					<!-- <EZToggle /> -->
 				</EZGroup>
 				<!-- contents -->
 				<EZGroup layout="vertical" bg="#FFCC00" padding="10px">
@@ -40,6 +41,7 @@ import EZButton from '@/components/core/EZButton.vue'
 import EZLabel from '@/components/core/EZLabel.vue'
 import EZSelect from '@/components/core/EZSelect.vue'
 import EZImage from '@/components/core/EZImage.vue'
+import EZToggle from '@/components/core/EZToggle.vue'
 import { ref } from 'vue'
 function onSelect(item, index) {
 	console.log(item, index)

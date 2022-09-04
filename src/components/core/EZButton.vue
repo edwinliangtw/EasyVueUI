@@ -6,8 +6,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import EZLabel from '@/components/core/EZLabel.vue'
+import { ref } from 'vue'
 let alignSetting = ref('')
 let bgColor = ref('')
 const props = defineProps({
@@ -20,13 +20,13 @@ const props = defineProps({
     border: {type: String, default: 'none' },
     borderRadius: {type: String, default: '5px' },
     shadow: {type: String, default: 'none'},
-    verticalAlign: {type: String, default: 'top'}
+    align: {type: String, default: 'center'}
 })
 bgColor.value = props.bgUpColor;
-switch(props.verticalAlign){
-    case 'top': alignSetting.value = 'flex-start'; break;
-    case 'middle': alignSetting.value = 'center'; break;
-    case 'bottom': alignSetting.value = 'flex-end'; break;
+switch(props.align){
+    case 'start': alignSetting.value = 'flex-start'; break;
+    case 'center': alignSetting.value = 'center'; break;
+    case 'end': alignSetting.value = 'flex-end'; break;
 }
 </script>
 
