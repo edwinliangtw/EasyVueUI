@@ -3,8 +3,8 @@
         <EZGroup class="ez-pointer" justify="space-between" @click="showSelection=true" :width="width" :bg="bg" padding="5px">
             <EZLabel color="white">{{title}}</EZLabel>
             <EZLabel color="white">
-                <template v-if="showSelection">▲</template>
-                <template v-else>▼</template>
+                <template v-if="showSelection"><div class="symbol-arrow-up"></div></template>
+                <template v-else><div class="symbol-arrow-down"></div></template>
             </EZLabel>
         </EZGroup>
         <EZGroup v-if="showSelection">
@@ -41,3 +41,26 @@ function removeOutsideEvent(){
     document.body.removeEventListener('click', close)
 }
 </script>
+
+<style scoped>
+.symbol-arrow-up{
+    position: relative;
+    left: -1px;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(225deg);
+}
+.symbol-arrow-down{
+    position: relative;
+    left: -1px;
+    top: 5px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+}
+</style>

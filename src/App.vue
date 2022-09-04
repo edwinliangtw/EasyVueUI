@@ -16,7 +16,8 @@
 					<EZLabel color="white" size="3em">Banner</EZLabel>
 					<EZSelect width="200px" :items="['test1','test2','test3']" :onSelect="onSelect"/>
 					<EZImage src="assets/img/appIcon.png" width="100px" height="100px" />
-					<EZToggle name="myCheck" :onToggle="onToggle">check test</EZToggle>
+					<EZToggle type="radioBox" name="myCheck" :onToggle="onToggle">radioBox test</EZToggle>
+					<EZToggle type="checkBox" name="myCheck2" :onToggle="onToggle">checkBox test</EZToggle>
 				</EZGroup>
 				<!-- contents -->
 				<EZGroup layout="vertical" bg="#FFCC00" padding="10px">
