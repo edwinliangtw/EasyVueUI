@@ -1,68 +1,44 @@
 <template>
-	<EZGroup width="100%" layout="vertical">
-		<EZGroup width="100%" layout="vertical" bg="#CCC" minHeight="calc(100vh - 100px)">
-			<!-- header -->
-			<EZGroup width="100%" bg="black" justify="space-between" padding="10px">
-				<EZLabel color="white">Website Title</EZLabel>
-				<EZGroup layout="horizontal" gap="10px">
-					<EZLabel color="deeppink">Links1</EZLabel>
-					<EZLabel color="white">Links2</EZLabel>
-					<EZLabel color="white">Links3</EZLabel>
-				</EZGroup>
-			</EZGroup>
-			<EZGroup width="600px" layout="vertical" marginAuto="true">
-				<!-- banner -->
-				<EZGroup layout="horizontal" justify="space-between">
-					<EZGroup bg="#666" layout="vertical" padding="10px" width="50%">
-						<EZLabel color="white" size="3em">Banner</EZLabel>
-						<EZSelect width="200px" :items="['test1','test2','test3']" :onSelect="onSelect"/>
-						<EZImage src="assets/img/appIcon.png" width="100px" height="100px" />
-						<EZToggle type="radioBox" name="myCheck" :onToggle="onToggle">radioBox test</EZToggle>
-						<EZToggle type="checkBox" name="myCheck2" :onToggle="onToggle">checkBox test</EZToggle>
-					</EZGroup>
-					<EZGroup bg="#333" layout="vertical" padding="10px" width="50%">
-						<EZLabel color="white" size="3em">Test</EZLabel>
-						<EZCheckBoxGroup :items="['test1','test2','test3']" :onItemsSelect="onItemsSelect"></EZCheckBoxGroup>
-						<EZRadioBoxGroup :items="['test1','test2','test3']" :onItemsSelect="onItemsSelect2"></EZRadioBoxGroup>
-					</EZGroup>
-				</EZGroup>
-				<!-- contents -->
-				<EZGroup layout="vertical" bg="#FFCC00" padding="10px">
-					<EZLabel color="white" size="3em">Content</EZLabel>
-					<EZLabel color="white" size="3em">Content</EZLabel>
-					<EZLabel color="white" size="3em">Content</EZLabel>
-					<EZLabel color="white" size="3em">Content</EZLabel>
-					<EZLabel color="white" size="3em">Content</EZLabel>
-				</EZGroup>
+	<!-- container -->
+	<EZGroup layout="v" width="100%" minHeight="calc(100vh - 100px)" bg="gray">
+		<!-- nav -->
+		<EZGroup layout="h" width="100%" height="50px" bg="black" padding="10px" hJustify="space-between">
+			<EZLabel color="white" size="24px">WebTitle</EZLabel>
+			<EZGroup gap="10px">
+				<EZLabel color="deeppink" size="24px">Link1</EZLabel>
+				<EZLabel color="white" size="24px">Link2</EZLabel>
+				<EZLabel color="white" size="24px">Link3</EZLabel>
 			</EZGroup>
 		</EZGroup>
-		<!-- footer -->
-		<EZGroup width="100%" bg="#000" height="100px" justify="center" padding="10px">
-			<EZLabel color="white" size="3em">Footer</EZLabel>
+		<!-- main -->
+		<EZGroup layout="h" width="100%" height="100%" bg="#666">
+			<EZGroup layout="v" width="90%" bg="#333" margin="0 auto" hJustify="center">
+				<EZGroup width="100%">
+					<EZGroup width="50%" height="200px" bg="#FFCC00" vJustify="center" hJustify="center">
+						<EZLabel color="white" size="2em" cursorEnable="true">Hello</EZLabel>
+						<EZLabel color="white" size="2em">world</EZLabel>
+					</EZGroup>
+					<EZGroup width="50%" bg="#333">
+						<EZImage src="assets/img/appIcon.png" />
+					</EZGroup>
+				</EZGroup>
+				<EZLabel color="white" size="24px">Content</EZLabel>
+				<EZLabel color="white" size="24px">Content</EZLabel>
+				<EZLabel color="white" size="24px">Content</EZLabel>
+			</EZGroup>
 		</EZGroup>
+	</EZGroup>
+	<!-- footer -->
+	<EZGroup layout="v" width="100%" height="100px" bg="black" hJustify="center" vJustify="center">
+		<EZLabel color="white" size="24px">Footer</EZLabel>
 	</EZGroup>
 </template>
 
 <script setup>
-import EZGroup from '@/components/core/EZGroup.vue'
-import EZButton from '@/components/core/EZButton.vue'
-import EZLabel from '@/components/core/EZLabel.vue'
-import EZSelect from '@/components/core/EZSelect.vue'
-import EZImage from '@/components/core/EZImage.vue'
-import EZToggle from '@/components/core/EZToggle.vue'
-import EZCheckBoxGroup from '@/components/core/EZCheckBoxGroup.vue'
-import EZRadioBoxGroup from '@/components/core/EZRadioBoxGroup.vue'
-import { ref } from 'vue'
-function onSelect(item, index) {
-	console.log(item, index)
-}
-function onToggle(name, checked) {
-	console.log(name, checked)
-}
-function onItemsSelect(checked){
-	console.log(checked)
-}
-function onItemsSelect2(checked){
-	console.log(checked)
-}
+import EZGroup from './components/core/EZGroup.vue';
+import EZLabel from './components/core/EZLabel.vue';
+import EZImage from './components/core/EZImage.vue';
 </script>
+
+<style scoped>
+</style>

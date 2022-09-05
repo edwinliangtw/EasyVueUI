@@ -1,58 +1,60 @@
 <template>
-    <EZGroup class="ez-image" justify="center">
-        <template v-if="!src">
-            {{parseInt(widthSetting)}} x {{parseInt(heightSetting)}}
-        </template>
-        <slot></slot>
+    <EZGroup class="ez-image" layout="v" :class="[refSrc ? 'fadeIn' : '']" @mouseenter="setShowInfo()"
+        @mouseleave="clearShowInfo()">
+        <EZLabel v-if="refShowInfo" color="gray" size="10px">
+            {{ parseInt(refWidth) }} x {{ parseInt(refHeight) }}
+        </EZLabel>
+        <EZLabel v-if="refShowInfo" color="gray" size="10px">
+            {{ src }}
+        </EZLabel>
     </EZGroup>
 </template>
 
 <script setup>
-import EZGroup from '@/components/core/EZGroup.vue'
 import { ref } from 'vue'
-let alignSetting = ref('')
-let widthSetting = ref('')
-let heightSetting = ref('')
-let srcSetting = ref('')
+import EZGroup from './EZGroup.vue';
+import EZLabel from './EZLabel.vue';
+const refSrc = ref('')
+const refWidth = ref('')
+const refHeight = ref('')
+const refShowInfo = ref(false)
 const props = defineProps({
-    color:{ type: String, default: '#FFF' },
-    size: { type: String, default: '.5em' },
-    src: { type: String },
-    width: { type: String },
-    height: { type: String },
-    shadow: { type: String, default: 'none' },
-    align: {type: String, default: 'none'},
+    src: { type: String, required: true },
 })
-switch(props.align){
-    case 'start': alignSetting.value = 'flex-start'; break;
-    case 'center': alignSetting.value = 'center'; break;
-    case 'end': alignSetting.value = 'flex-end'; break;
-}
-widthSetting.value = props.width || '100px'
-heightSetting.value = props.height || '100px'
-srcSetting.value = '#333'
-if(props.src){
+if (props.src) {
     let img = new Image
-    img.src = new URL('../../'+props.src,import.meta.url).href
-    img.onload = ()=>{
+    img.src = new URL('../../' + props.src, import.meta.url).href
+    img.onload = () => {
         img.onload = null
-        widthSetting.value = props.width || (img.naturalWidth+'px')
-        heightSetting.value = props.height || (img.naturalHeight+'px')
-        srcSetting.value = `url(${img.src})`
+        refWidth.value = props.width || (img.naturalWidth + 'px')
+        refHeight.value = props.height || (img.naturalHeight + 'px')
+        refSrc.value = `url(${img.src})`
         img = null
     }
+}
+let t = -1;
+function setShowInfo() {
+    t = setTimeout(() => this.refShowInfo = true, 1000)
+}
+function clearShowInfo() {
+    this.refShowInfo = false
+    clearTimeout(t);
+    t = -1;
 }
 </script>
 
 <style scoped>
 .ez-image {
-    color: v-bind(color);
-    font-size: v-bind(size);
-    width: v-bind(widthSetting);
-    height: v-bind(heightSetting);
-    background: v-bind(srcSetting);
+    width: v-bind(refWidth);
+    height: v-bind(refHeight);
+    background: v-bind(refSrc);
     background-size: 100%;
-    box-shadow: v-bind(shadow);
-    align-self: v-bind(alignSetting);
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.fadeIn {
+    opacity: 1;
 }
 </style>
