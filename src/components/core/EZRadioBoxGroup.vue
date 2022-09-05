@@ -14,7 +14,8 @@ const props = defineProps({
     items: { type: Array, default: [] },
     onItemsSelect: { type: Function, required: true },
 })
-const keys = ref(Array(props.items.length).fill(Math.random()))
+const keys = ref(Array(props.items.length).fill(-1))
+keys.value.forEach((item,idx)=> (keys.value[idx]=Math.random()))
 const selectedIndex = ref(-1)
 function onToggle(name, checked){
     if(checked){

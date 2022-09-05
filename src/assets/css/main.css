@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+#app {
+  width: 100%;
+}
+
 /** 滑鼠手勢指標 */
 .ez-pointer {
   cursor: pointer;
