@@ -1,6 +1,6 @@
 <template>
     <div class="ez-component">
-        <slot>&nbsp</slot>
+        <slot>&nbsp;</slot>
     </div>
 </template>
 
@@ -29,7 +29,7 @@ const props = defineProps({
 })
 switch (props.cursorEnable) {
     case 'true': refCursor.value = 'pointer'; break;
-    case 'false': refCursor.value = 'auto'; break;
+    case 'false': refCursor.value = ''; break;
 }
 </script>
 

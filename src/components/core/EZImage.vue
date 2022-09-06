@@ -39,7 +39,6 @@ function setImage(src) {
         img.onload = null;
         refWidth.value = props.width || img.naturalWidth + "px";
         refHeight.value = props.height || img.naturalHeight + "px";
-        console.log(refWidth.value)
         refSrc.value = `url(${img.src})`;
         refSize.value = `${refWidth.value} ${refHeight.value}`
         img = null;
