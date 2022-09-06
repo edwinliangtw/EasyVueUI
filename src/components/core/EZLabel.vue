@@ -9,6 +9,7 @@ import EZComponent from './EZComponent.vue';
 defineProps({
     color: { type: String, default: '#000' },
     size: { type: String, default: '1em' },
+    textShadow: { type: String, default: 'none' },
 })
 </script>
 
@@ -16,5 +17,6 @@ defineProps({
 .ez-label {
     color: v-bind(color);
     font-size: v-bind(size);
+    text-shadow: v-bind(textShadow);
 }
 </style>

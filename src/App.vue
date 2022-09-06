@@ -19,7 +19,9 @@
 						<EZLabel color="white" size="2em">world</EZLabel>
 					</EZGroup>
 					<EZGroup width="50%" bg="#333">
-						<EZImage src="assets/img/appIcon.png" />
+						<EZImage src="./img/app.jpg" width="100%" />
+						<EZImage src="./img/app.jpg" width="100%" />
+						<EZImage src="./img/app.jpg" width="100%" />
 					</EZGroup>
 				</EZGroup>
 				<EZLabel color="white" size="24px">Content</EZLabel>
