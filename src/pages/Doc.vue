@@ -1,7 +1,7 @@
 <template>
     <EZGroup layout="v" width="90%" bg="white" margin="0 auto" hJustify="center">
         <EZGroup layout="v" gap="30px" width="100%" bg="#FFF" vJustify="center" hJustify="center" padding="50px">
-            <EZLabel color="deeppink" size="1.3em">指南手冊</EZLabel>
+            <EZLabel color="deeppink" size="2em">指南手冊</EZLabel>
             <EZLabel color="gray" size="1em">所有元件皆繼承 EZComponent，即 EZGroup, EZButton, EZImage, EZLabel, EZLinkLabel
                 皆有共用 css 屬性來自 EZComponent。</EZLabel>
             <EZGroup layout="v" width="100%" gap="20px">
@@ -60,7 +60,7 @@ textShadow: { type: String, default: 'none' },      // css text-shadow </pre>
                 <EZLabel color="deeppink" size="1.3em">EZLinkLabel Props (extends EZLabel)</EZLabel>
                 <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%">
                     <pre style="overflow:auto">
-to: { type: String, default: '' },                  // vue-outer to </pre>
+to: { type: String, default: '' },                  // vue-router to </pre>
                 </EZLabel>
                 <!-- EZButton -->
                 <EZLabel color="deeppink" size="1.3em">EZButton Props</EZLabel>

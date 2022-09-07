@@ -3,7 +3,7 @@
 	<EZGroup layout="v" width="100%" minHeight="calc(100vh - 100px)" bg="pink">
 		<!-- nav -->
 		<EZGroup layout="h" width="100%" height="50px" bg="black" padding="10px" hJustify="space-between">
-			<EZLabel color="white" size="24px">EasyVueUI</EZLabel>
+			<EZLinkLabel to="/" color="white" size="24px">EasyVueUI</EZLinkLabel>
 			<EZGroup gap="10px" vJustify="center" deeppink>
 				<EZLinkLabel to="/" color="deeppink" size="16px">首頁</EZLinkLabel>
 				<EZLinkLabel to="/doc" color="white" size="16px">文件</EZLinkLabel>
@@ -29,4 +29,5 @@ import EZLinkLabel from '@/components/ezcore/EZLinkLabel.vue';
 </script>
 
 <style scoped>
+
 </style>
