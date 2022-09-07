@@ -4,6 +4,8 @@
             <EZLabel color="deeppink" size="2em">指南手冊</EZLabel>
             <EZLabel color="gray" size="1em">所有元件皆繼承 EZComponent，即 EZGroup, EZButton, EZImage, EZLabel, EZLinkLabel
                 皆有共用 css 屬性來自 EZComponent。</EZLabel>
+            <EZImage src="assets/img/sample.png" width="70vw" height="calc(70vw * 307 / 846)" borderRadius="20px"
+                boxShadow="0 0 5px gray" />
             <EZGroup layout="v" width="100%" gap="20px">
                 <!-- EZComponent -->
                 <EZLabel color="deeppink" size="1.3em">EZComponent Props</EZLabel>
@@ -41,7 +43,7 @@ hJustify: { type: String, default: 'none' },        // css justify-content - hor
 gap: { type: String, default: '0' },                // css gap - gap between elements </pre>
                 </EZLabel>
                 <!-- EZImage -->
-                <EZLabel color="deeppink" size="1.3em">EZImage Props</EZLabel>
+                <EZLabel color="deeppink" size="1.3em">EZImage Props (extends EZGroup)</EZLabel>
                 <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%">
                     <pre style="overflow:auto">
 src: { type: String, required: true },              // html src
@@ -49,7 +51,7 @@ width: { type: String, default: '' },               // css width
 height: { type: String, default: '' },              // css height </pre>
                 </EZLabel>
                 <!-- EZLabel -->
-                <EZLabel color="deeppink" size="1.3em">EZLabel Props</EZLabel>
+                <EZLabel color="deeppink" size="1.3em">EZLabel Props (extends EZGroup)</EZLabel>
                 <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%">
                     <pre style="overflow:auto">
 color: { type: String, default: '#000' },           // css color
@@ -63,7 +65,7 @@ textShadow: { type: String, default: 'none' },      // css text-shadow </pre>
 to: { type: String, default: '' },                  // vue-router to </pre>
                 </EZLabel>
                 <!-- EZButton -->
-                <EZLabel color="deeppink" size="1.3em">EZButton Props</EZLabel>
+                <EZLabel color="deeppink" size="1.3em">EZButton Props (extends EZGroup)</EZLabel>
             </EZGroup>
         </EZGroup>
     </EZGroup>
@@ -72,4 +74,5 @@ to: { type: String, default: '' },                  // vue-router to </pre>
 <script setup>
 import EZGroup from '@/components/ezcore/EZGroup.vue';
 import EZLabel from '@/components/ezcore/EZLabel.vue';
+import EZImage from '../components/ezcore/EZImage.vue';
 </script>
