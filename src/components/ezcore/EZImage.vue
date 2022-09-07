@@ -6,6 +6,7 @@
             {{ refWidth }} x {{ refHeight }} <br>
             {{ src }}
         </EZLabel>
+        <slot></slot>
     </EZGroup>
 </template>
 
