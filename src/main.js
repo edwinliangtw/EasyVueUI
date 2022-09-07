@@ -1,5 +1,9 @@
-import { createApp } from 'vue'
+import { createApp, reactive } from 'vue'
 import App from './App.vue'
-import '@/assets/css/main.css'
+import router from './router'
+import './assets/css/main.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.config.globalProperties.$config = reactive({ ez: { debugImage: true } })
+app.use(router)
+app.mount('#app')

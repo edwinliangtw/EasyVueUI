@@ -7,13 +7,13 @@
 <script setup>
 import { ref } from 'vue';
 import EZComponent from './EZComponent.vue';
-let refLayout = ref('')
-let refWrap = ref('')
-let refMJustify = ref('')
-let refAJustify = ref('')
+const refLayout = ref('')
+const refWrap = ref('')
+const refMJustify = ref('')
+const refAJustify = ref('')
 const props = defineProps({
     layout: { type: String, default: 'h' },
-    wrap: { type: String, default: 'false' },
+    wrap: { type: String, default: 'true' },
     vJustify: { type: String, default: 'none' },
     hJustify: { type: String, default: 'none' },
     gap: { type: String, default: '0' },

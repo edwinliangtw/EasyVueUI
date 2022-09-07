@@ -1,5 +1,5 @@
 <template>
-    <div class="ez-component">
+    <div class="ez-component" :title="title">
         <slot>&nbsp;</slot>
     </div>
 </template>
@@ -26,6 +26,8 @@ const props = defineProps({
     zIndex: { type: String, default: '' },
     cursorEnable: { type: String, default: 'false' },
     opacity: { type: String, default: '1' },
+    alignSelf: { type: String, default: 'auto' },
+    title: { type: String, default: '' },
 })
 switch (props.cursorEnable) {
     case 'true': refCursor.value = 'pointer'; break;
@@ -55,5 +57,6 @@ switch (props.cursorEnable) {
     z-index: v-bind(zIndex);
     cursor: v-bind(refCursor);
     opacity: v-bind(opacity);
+    align-self: v-bind(alignSelf);
 }
 </style>

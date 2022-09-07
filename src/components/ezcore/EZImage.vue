@@ -1,8 +1,8 @@
 <template>
-    <EZGroup class="ez-image" layout="v" @mouseenter="setShowInfo()" @mouseleave="clearShowInfo()"
-        :class="[refSrc ? 'fadeIn' : '']">
-        <EZLabel v-if="refShowInfo" position="absolute" x="5px" y="5px" color="white" textShadow="0px 0px 5px black"
-            size="10px" zIndex="9999999">
+    <EZGroup class="ez-image" layout="v" @mouseenter="refShowInfo = true" @mouseleave="refShowInfo = false"
+        :class="{fadeIn:refSrc}">
+        <EZLabel v-if="$config.ez.debugImage && refShowInfo" position="absolute" x="5px" y="5px" color="white"
+            textShadow="0px 0px 5px black" size="10px" zIndex="9999999">
             {{ refWidth }} x {{ refHeight }} <br>
             {{ src }}
         </EZLabel>
@@ -23,15 +23,6 @@ const props = defineProps({
     width: { type: String, default: '' },
     height: { type: String, default: '' },
 })
-let t = -1;
-function setShowInfo() {
-    t = setTimeout(() => this.refShowInfo = true, 0)
-}
-function clearShowInfo() {
-    this.refShowInfo = false
-    clearTimeout(t);
-    t = -1;
-}
 function setImage(src) {
     let img = new Image();
     img.src = new URL(`/src/assets/${src}`, import.meta.url).href;
