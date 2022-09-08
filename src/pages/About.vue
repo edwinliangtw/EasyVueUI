@@ -6,12 +6,12 @@
             專業領域為遊戲設計,網站開發與視覺設計<br>
             edwinliang.tw@gmail.com
         </EZLabel>
-        <EZImage src="img/symbol.png" />
+        <EZImage src="img/symbol.png" width="100%" maxWidth="400px" />
     </EZGroup>
 </template>
 
 <script setup>
 import EZGroup from '@/components/ezcore/EZGroup.vue';
 import EZLabel from '@/components/ezcore/EZLabel.vue';
-import EZImage from '../components/ezcore/EZImage.vue';
+import EZImage from '@/components/ezcore/EZImage.vue';
 </script>

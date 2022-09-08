@@ -19,7 +19,7 @@
 		</EZGroup>
 	</EZGroup>
 	<!-- footer -->
-	<EZGroup layout="v" width="100%" height="100px" bg="black" hJustify="center" vJustify="center">
+	<EZGroup layout="v" width="100%" height="100px" bg="black" padding="10px" hJustify="center" vJustify="center">
 		<EZLabel color="gray" size=".5em">版權聲明</EZLabel>
 		<EZLabel color="gray" size=".5em">本中文文檔內容版權為 edwinliang.tw@gmail.com 所有，保留所有權利。</EZLabel>
 	</EZGroup>
