@@ -30,7 +30,7 @@ cursorEnable: { type: String, default: 'false' },   // true | false - display cu
 opacity: { type: String, default: '1' },            // css opacity
 alignSelf: { type: String, default: 'auto' },       // css align-self
 title: { type: String, default: '' },               // html title
-rwdWidth: { type: String, default: '' },            // number without unit - rwd max witdh setting</pre>
+rwdWidth: { type: String, default: '' },            // number without unit - rwd break point setting</pre>
                 </EZLabel>
                 <!-- EZGroup -->
                 <EZLabel color="deeppink" size="1.3em">EZGroup Props</EZLabel>
