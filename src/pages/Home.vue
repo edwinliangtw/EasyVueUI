@@ -16,7 +16,7 @@
             <EZGroup width="100%" hJustify="space-between" margin="50px 0px" gap="30px">
                 <EZGroup layout="v" width="25%" gap="10px" rwdWidth="720">
                     <EZLabel color="deeppink" size="1.3em">易學易用</EZLabel>
-                    <EZLabel color="gray" size="1em">html 與 css 基本概念掌握即可使用，元件已整理常用 css 建立於標籤屬性上 (文件待補齊)</EZLabel>
+                    <EZLabel color="gray" size="1em">html 與 css 基本概念掌握即可使用，元件已整理常用 css 建立於標籤屬性上</EZLabel>
                 </EZGroup>
                 <EZGroup layout="v" width="25%" gap="10px" rwdWidth="720">
                     <EZLabel color="deeppink" size="1.3em">快速建構</EZLabel>
@@ -55,6 +55,5 @@ npm run dev</pre>
 <script setup>
 import EZGroup from '@/components/ezcore/EZGroup.vue';
 import EZLabel from '@/components/ezcore/EZLabel.vue';
-import EZRouterLabel from '@/components/ezcore/EZLabel.vue';
 import EZButton from '@/components/ezcore/EZButton.vue';
 </script>

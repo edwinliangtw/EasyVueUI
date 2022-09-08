@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { getCurrentInstance, onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 const refCursor = ref('')
 const refWidth = ref('')
 const props = defineProps({

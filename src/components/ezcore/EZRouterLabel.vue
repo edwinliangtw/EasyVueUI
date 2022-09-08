@@ -1,5 +1,5 @@
 <template>
-    <RouterLink class="ez-routerlabel" :to="to">
+    <RouterLink class="ez-routerlabel">
         <EZGroup vJustify="center">
             <slot></slot>
         </EZGroup>
@@ -9,7 +9,6 @@
 <script setup>
 import EZGroup from './EZGroup.vue';
 const props = defineProps({
-    to: { type: String, default: '' },
     color: { type: String, default: '#000' },
     size: { type: String, default: '1em' },
     textShadow: { type: String, default: 'none' },

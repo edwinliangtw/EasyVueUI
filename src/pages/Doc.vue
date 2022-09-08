@@ -3,7 +3,7 @@
         <EZGroup layout="v" gap="30px" width="100%" bg="#FFF" vJustify="center" hJustify="center" padding="50px">
             <EZLabel color="deeppink" size="2em">指南手冊</EZLabel>
             <EZLabel color="gray" size="1em">所有元件皆繼承 EZComponent，即 EZGroup, EZButton, EZImage, EZLabel, EZRouterLabel
-                皆有共用 css 屬性來自 EZComponent。</EZLabel>
+                皆有共用 props 屬性來自 EZComponent。</EZLabel>
             <EZImage src="img/sample.png" width="100%" borderRadius="20px" boxShadow="0 0 5px gray" />
             <EZGroup layout="v" width="100%" gap="20px">
                 <!-- EZComponent -->
@@ -59,13 +59,18 @@ size: { type: String, default: '1em' },             // css font-size
 textShadow: { type: String, default: 'none' },      // css text-shadow </pre>
                 </EZLabel>
                 <!-- EZRouterLabel -->
-                <EZLabel color="deeppink" size="1.3em">EZRouterLabel Props (extends EZLabel)</EZLabel>
+                <EZLabel color="deeppink" size="1.3em">EZRouterLabel Props (extends RouterLink, implements EZLabel)
+                </EZLabel>
                 <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%">
                     <pre style="overflow:auto">
-to: { type: String, default: '' },                  // vue-router to </pre>
+include all RouterLink props</pre>
                 </EZLabel>
                 <!-- EZButton -->
                 <EZLabel color="deeppink" size="1.3em">EZButton Props (extends EZGroup)</EZLabel>
+                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%">
+                    <pre style="overflow:auto">
+include all EZGroup props</pre>
+                </EZLabel>
             </EZGroup>
         </EZGroup>
     </EZGroup>
@@ -74,5 +79,5 @@ to: { type: String, default: '' },                  // vue-router to </pre>
 <script setup>
 import EZGroup from '@/components/ezcore/EZGroup.vue';
 import EZLabel from '@/components/ezcore/EZLabel.vue';
-import EZImage from '../components/ezcore/EZImage.vue';
+import EZImage from '@/components/ezcore/EZImage.vue';
 </script>
