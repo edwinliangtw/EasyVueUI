@@ -4,7 +4,7 @@
             <EZLabel color="deeppink" size="2em">指南手冊</EZLabel>
             <EZLabel color="gray" size="1em">所有元件皆繼承 EZComponent，即 EZGroup, EZButton, EZImage, EZLabel, EZLinkLabel
                 皆有共用 css 屬性來自 EZComponent。</EZLabel>
-            <EZImage src="./img/sample.png" width="70vw" height="calc(70vw * 307 / 846)" borderRadius="20px"
+            <EZImage src="img/sample.png" width="70vw" height="calc(70vw * 307 / 846)" borderRadius="20px"
                 boxShadow="0 0 5px gray" />
             <EZGroup layout="v" width="100%" gap="20px">
                 <!-- EZComponent -->

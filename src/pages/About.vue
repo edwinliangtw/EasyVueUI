@@ -6,7 +6,7 @@
             專業領域為遊戲設計,網站開發與視覺設計<br>
             edwinliang.tw@gmail.com
         </EZLabel>
-        <EZImage src="./img/symbol.png" />
+        <EZImage src="img/symbol.png" />
     </EZGroup>
 </template>
 

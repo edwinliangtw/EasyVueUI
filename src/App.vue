@@ -4,7 +4,7 @@
 		<!-- nav -->
 		<EZGroup layout="h" width="100%" height="50px" bg="black" padding="10px" hJustify="space-between">
 			<EZLinkLabel to="/" color="white" size="24px">
-				<EZImage src="assets/img/favicon.ico" />
+				<EZImage src="img/vue.png" />
 				EasyVueUI
 			</EZLinkLabel>
 			<EZGroup gap="10px" vJustify="center" deeppink>

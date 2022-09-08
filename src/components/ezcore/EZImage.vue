@@ -27,6 +27,7 @@ const props = defineProps({
 function setImage(src) {
     let img = new Image();
     img.src = new URL(`/src/assets/${src}`, import.meta.url).href;
+    console.log(img.src)
     img.onload = () => {
         img.onload = null;
         refWidth.value = props.width || img.naturalWidth + "px";
