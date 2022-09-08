@@ -29,7 +29,8 @@ zIndex: { type: String, default: '' },              // css z-index
 cursorEnable: { type: String, default: 'false' },   // true | false - display cursor pointer
 opacity: { type: String, default: '1' },            // css opacity
 alignSelf: { type: String, default: 'auto' },       // css align-self
-title: { type: String, default: '' },               // html title </pre>
+title: { type: String, default: '' },               // html title
+rwdWidth: { type: String, default: '' },            // number without unit - rwd max witdh setting</pre>
                 </EZLabel>
                 <!-- EZGroup -->
                 <EZLabel color="deeppink" size="1.3em">EZGroup Props</EZLabel>

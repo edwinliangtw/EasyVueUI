@@ -13,18 +13,18 @@
                     <EZLabel color="white" size="1em">馬上下載</EZLabel>
                 </EZButton>
             </EZGroup>
-            <EZGroup width="100%" hJustify="space-between" margin="50px 0px">
-                <EZGroup layout="v" width="25%" gap="10px">
+            <EZGroup width="100%" hJustify="space-between" margin="50px 0px" gap="30px">
+                <EZGroup layout="v" width="25%" gap="10px" rwdWidth="720">
                     <EZLabel color="deeppink" size="1.3em">易學易用</EZLabel>
                     <EZLabel color="gray" size="1em">html 與 css 基本概念掌握即可使用，元件已整理常用 css 建立於標籤屬性上 (文件待補齊)</EZLabel>
                 </EZGroup>
-                <EZGroup layout="v" width="25%" gap="10px">
+                <EZGroup layout="v" width="25%" gap="10px" rwdWidth="720">
                     <EZLabel color="deeppink" size="1.3em">快速建構</EZLabel>
                     <EZLabel color="gray" size="1em">不用重複撰寫複雜 css 即可快速排版頁面。 EZGroup 元件透過 layout 屬性設置 v (垂直) 或 h (水平)
                         即可設定元件排列方向
                     </EZLabel>
                 </EZGroup>
-                <EZGroup layout="v" width="25%" gap="10px">
+                <EZGroup layout="v" width="25%" gap="10px" rwdWidth="720">
                     <EZLabel color="deeppink" size="1.3em">豐富UI組件</EZLabel>
                     <EZLabel color="gray" size="1em">目前 UI 組件庫有常用設計元件如 EZGroup, EZButton, EZImage, EZLabel,
                         EZRouterLabel (元件待擴增)
