@@ -4,7 +4,8 @@
             <iframe src="https://www3.cbox.ws/box/?boxid=3521042&boxtag=YNTNWb" allowtransparency="yes" allow="autoplay"
                 frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
         </EZGroup>
-        <EZButton bg="orange" boxShadow="0 0 5px orange" borderRadius="0px" @click="refOpen = !refOpen" alignSelf="end">
+        <EZButton class="chatboxButton" bg="orange" boxShadow="0 0 5px orange" borderRadius="0px"
+            @click="refOpen = !refOpen" alignSelf="end">
             <EZLabel color="white" size="1em">點我留言</EZLabel>
         </EZButton>
     </EZGroup>
@@ -26,10 +27,15 @@ const refOpen = ref(false)
     width: 450px;
     height: 100vh;
     transition: left .3s;
+    pointer-events: none;
 }
 
 .chatbox.chatboxActive {
     left: 0px;
+}
+
+.chatbox>.chatboxButton {
+    pointer-events: all;
 }
 
 .chatbox iframe {

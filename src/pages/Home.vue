@@ -6,7 +6,7 @@
             <EZGroup gap="20px">
                 <EZButton bg="white" boxShadow="0 0 5px deeppink" padding="10px" border="1px solid deeppink"
                     @click="$router.push('/doc')">
-                    <EZLinkLabel color="deeppink" size="1em">快速上手</EZLinkLabel>
+                    <EZLabel color="deeppink" size="1em">快速上手</EZLabel>
                 </EZButton>
                 <EZButton bg="deeppink" boxShadow="0 0 5px deeppink" padding="10px" width="100px"
                     onclick="window.open('https://github.com/edwinliangtw/EasyVueUI')">
@@ -27,7 +27,7 @@
                 <EZGroup layout="v" width="25%" gap="10px">
                     <EZLabel color="deeppink" size="1.3em">豐富UI組件</EZLabel>
                     <EZLabel color="gray" size="1em">目前 UI 組件庫有常用設計元件如 EZGroup, EZButton, EZImage, EZLabel,
-                        EZLinkLabel (元件待擴增)
+                        EZRouterLabel (元件待擴增)
                     </EZLabel>
                 </EZGroup>
             </EZGroup>
@@ -55,6 +55,6 @@ npm run dev</pre>
 <script setup>
 import EZGroup from '@/components/ezcore/EZGroup.vue';
 import EZLabel from '@/components/ezcore/EZLabel.vue';
-import EZLinkLabel from '@/components/ezcore/EZLabel.vue';
+import EZRouterLabel from '@/components/ezcore/EZLabel.vue';
 import EZButton from '@/components/ezcore/EZButton.vue';
 </script>
