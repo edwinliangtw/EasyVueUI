@@ -4,8 +4,8 @@
         <!-- 防止拷貝圖片與自適應圖片大小 -->
         <img :src="refSrc" class="hiddenImage" />
         <EZGroup position="absolute" width="100%" height="100%" vJustify="flex-start">
-            <EZLabel v-if="$config.ez.debugImage && refShowInfo" x="5px" y="5px" color="white"
-                textShadow="0px 0px 5px black" size="10px" zIndex="9999999">
+            <EZLabel v-if="$ez.debugImage && refShowInfo" x="5px" y="5px" color="white" textShadow="0px 0px 5px black"
+                size="10px" zIndex="9999999">
                 {{ refWidth }} x {{ refHeight }} <br>
                 {{ src }}
             </EZLabel>

@@ -4,6 +4,6 @@ import router from './router'
 import './assets/css/main.css'
 
 const app = createApp(App)
-app.config.globalProperties.$config = reactive({ ez: { debugImage: false } })
+app.config.globalProperties.$ez = reactive({ debugImage: false })
 app.use(router)
 app.mount('#app')
