@@ -1,0 +1,90 @@
+<template>
+    <EZGroup class="noselect" layout="v" @mouseleave="addOutsideEvent()" @mouseenter="removeOutsideEvent()">
+        <EZGroup hJustify="space-between" width="100%" :bg="bg" padding="5px 10px" cursorEnable="true"
+            :borderRadius="showSelection?'5px 5px 0 0':'5px'" @click="showSelection=!showSelection"
+            boxShadow="0 0 5px gray" gap="10px">
+            <EZLabel color="white">{{title}}</EZLabel>
+            <EZGroup :class="[showSelection?'symbol-arrow-up':'symbol-arrow-down']" />
+        </EZGroup>
+        <EZGroup v-if="showSelection" zIndex="9999999" width="100%">
+            <EZGroup layout="v" position="absolute" width="100%">
+                <EZButton v-for="(item, key, index) in items" :key="index"
+                    :borderRadius="index==Object.keys(items).length-1?'0 0 5px 5px':'0px'" :bg="bg" width="100%"
+                    padding="5px" @click="$emit('onSelect',[key, item.label]), showSelection=false, title = item.label">
+                    <EZLabel :color="color" size="1em">{{item.label}}</EZLabel>
+                </EZButton>
+            </EZGroup>
+        </EZGroup>
+    </EZGroup>
+</template>
+
+<script setup>
+import EZGroup from '@/components/ezcore/EZGroup.vue'
+import EZLabel from '@/components/ezcore/EZLabel.vue'
+import EZButton from '@/components/ezcore/EZButton.vue'
+import { ref } from 'vue'
+const showSelection = ref(false)
+defineProps({
+    title: { type: String, default: 'please select' },
+    items: {
+        type: Object, default() {
+            return {
+                keyItem1: { label: 'label 1' },
+                keyItem2: { label: 'label 2' },
+                keyItem3: { label: 'label 3' },
+            }
+        }
+    },
+    bg: { type: String, default: '#333' },
+    color: { type: String, default: '#FFF' },
+})
+function close() {
+    showSelection.value = false;
+    document.body.removeEventListener('click', close)
+}
+function addOutsideEvent() {
+    document.body.addEventListener('click', close)
+}
+function removeOutsideEvent() {
+    document.body.removeEventListener('click', close)
+}
+</script>
+
+<style scoped>
+.symbol-arrow-up {
+    position: relative;
+    left: -1px;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(225deg);
+}
+
+.symbol-arrow-down {
+    position: relative;
+    left: -1px;
+    top: 5px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+}
+
+.noselect {
+    /* iOS Safari */
+    -webkit-touch-callout: none;
+    /* Safari */
+    -webkit-user-select: none;
+    /* Konqueror HTML */
+    -khtml-user-select: none;
+    /* Old versions of Firefox */
+    -moz-user-select: none;
+    /* Internet Explorer/Edge */
+    -ms-user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    user-select: none;
+}
+</style>

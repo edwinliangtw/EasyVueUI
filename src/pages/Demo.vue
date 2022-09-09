@@ -1,6 +1,10 @@
 <template>
     <EZGroup layout="v" gap="20px" width="90%" bg="white" margin="0 auto" padding="50px" hJustify="center">
         <EZLabel color="deeppink" size="2em">功能展示</EZLabel>
+        <EZGroup width="100%" bg="pink" padding="10px" borderRadius="10px" hJustify="center" gap="10px">
+            <EZSelect width="200px" @onSelect="onSelect" />
+            <EZSelect width="200px" @onSelect="onSelect" bg="deeppink" />
+        </EZGroup>
         <EZGroup width="100%" bg="pink" padding="10px" borderRadius="10px" hJustify="center">
             <EZTextInput text="SingleLine" borderRadius="5px" bg="rgba(255,255,255,.5)" color="gray" focusColor="blue"
                 rwdWidth="720" />
@@ -36,8 +40,12 @@ import EZLabel from '@/components/ezcore/EZLabel.vue';
 import EZTextInput from '@/components/ezcore/EZTextInput.vue';
 import EZToggle from '@/components/ezcore/EZToggle.vue';
 import EZCheckBoxGroup from '@/components/ezcore/EZCheckBoxGroup.vue';
-import EZRadioBoxGroup from '../components/ezcore/EZRadioBoxGroup.vue';
+import EZRadioBoxGroup from '@/components/ezcore/EZRadioBoxGroup.vue';
+import EZSelect from '@/components/ezcore/EZSelect.vue';
 
+function onSelect(obj) {
+    console.log(obj)
+}
 function onToggle(obj) {
     console.log(obj)
 }
