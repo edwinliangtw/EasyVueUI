@@ -9,6 +9,7 @@
 			</EZRouterLabel>
 			<EZGroup gap="10px" vJustify="center">
 				<EZRouterLabel to="/" color="deeppink" size="16px" activeClass="active">首頁</EZRouterLabel>
+				<EZRouterLabel to="/demo" color="white" size="16px" activeClass="active">展示</EZRouterLabel>
 				<EZRouterLabel to="/doc" color="white" size="16px" activeClass="active">文件</EZRouterLabel>
 				<EZRouterLabel to="/about" color="white" size="16px" activeClass="active">關於</EZRouterLabel>
 			</EZGroup>
