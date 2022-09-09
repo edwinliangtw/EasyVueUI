@@ -32,7 +32,7 @@ import EZLabel from '@/components/ezcore/EZLabel.vue';
 import EZRouterLabel from '@/components/ezcore/EZRouterLabel.vue';
 import EZImage from '@/components/ezcore/EZImage.vue';
 import EZRouterView from '@/components/ezcore/EZRouterView.vue';
-import ChatBox from '@/components/ChatBox.vue';
+import ChatBox from '@/pages/elements/ChatBox.vue';
 </script>
 
 <style scoped>

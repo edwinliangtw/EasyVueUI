@@ -24,10 +24,10 @@ const refWidth = ref('')
 const refHeight = ref('')
 const refShowInfo = ref(false)
 const props = defineProps({
-    src: { type: String, required: true },
-    width: { type: String, default: '' },
-    height: { type: String, default: 'auto' },
-    bg: { type: String, default: '' },
+    src: { type: String, required: true },          // html src
+    width: { type: String, default: '' },           // css width
+    height: { type: String, default: 'auto' },      // css height
+    bg: { type: String, default: '' },              // css background
 })
 function setImage(src) {
     let img = new Image();

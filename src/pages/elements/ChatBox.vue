@@ -13,9 +13,9 @@
 
 <script setup>
 import { ref } from 'vue';
-import EZGroup from './ezcore/EZGroup.vue';
-import EZButton from './ezcore/EZButton.vue';
-import EZLabel from './ezcore/EZLabel.vue';
+import EZGroup from '@/components/ezcore/EZGroup.vue';
+import EZButton from '@/components/ezcore/EZButton.vue';
+import EZLabel from '@/components/ezcore/EZLabel.vue';
 const refOpen = ref(false)
 </script>
 

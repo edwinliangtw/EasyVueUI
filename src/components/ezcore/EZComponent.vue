@@ -9,27 +9,27 @@ import { onMounted, onUnmounted, ref } from 'vue';
 const refCursor = ref('')
 const refWidth = ref('')
 const props = defineProps({
-    position: { type: String, default: 'relative' },
-    x: { type: String, default: '0' },
-    y: { type: String, default: '0' },
-    width: { type: String, default: 'auto' },
-    minWidth: { type: String, default: 'auto' },
-    maxWidth: { type: String, default: 'auto' },
-    height: { type: String, default: 'auto' },
-    minHeight: { type: String, default: 'auto' },
-    maxHeight: { type: String, default: 'auto' },
-    bg: { type: String, default: 'none' },
-    padding: { type: String, default: '0' },
-    margin: { type: String, default: '0' },
-    border: { type: String, default: 'none' },
-    borderRadius: { type: String, default: '0' },
-    boxShadow: { type: String, default: 'none' },
-    zIndex: { type: String, default: '' },
-    cursorEnable: { type: String, default: 'false' },
-    opacity: { type: String, default: '1' },
-    alignSelf: { type: String, default: 'auto' },
-    title: { type: String, default: '' },
-    rwdWidth: { type: String, default: '' },
+    position: { type: String, default: 'relative' },    // css position
+    x: { type: String, default: '0' },                  // css left
+    y: { type: String, default: '0' },                  // css top
+    width: { type: String, default: 'auto' },           // css width
+    minWidth: { type: String, default: 'auto' },        // css min-width
+    maxWidth: { type: String, default: 'auto' },        // css max-width
+    height: { type: String, default: 'auto' },          // css height
+    minHeight: { type: String, default: 'auto' },       // css min-height
+    maxHeight: { type: String, default: 'auto' },       // css max-height
+    bg: { type: String, default: 'none' },              // css background
+    padding: { type: String, default: '0' },            // css padding
+    margin: { type: String, default: '0' },             // css margin
+    border: { type: String, default: 'none' },          // css border
+    borderRadius: { type: String, default: '0' },       // css border-radius
+    boxShadow: { type: String, default: 'none' },       // css box-shadow
+    zIndex: { type: String, default: '' },              // css z-index
+    cursorEnable: { type: String, default: 'false' },   // true | false - display cursor pointer
+    opacity: { type: String, default: '1' },            // css opacity
+    alignSelf: { type: String, default: 'auto' },       // css align-self
+    title: { type: String, default: '' },               // html title
+    rwdWidth: { type: String, default: '' },            // number without unit - rwd break point setting
 })
 switch (props.cursorEnable) {
     case 'true': refCursor.value = 'pointer'; break;

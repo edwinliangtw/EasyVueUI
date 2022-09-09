@@ -7,6 +7,10 @@
             edwinliang.tw@gmail.com
         </EZLabel>
         <EZImage src="img/symbol.png" width="100%" maxWidth="400px" />
+        <EZTextInput text="XXXXXXX" borderRadius="5px" color="gray" focusColor="green" rwdWidth="720"
+            boxShadow="0 0 5px pink" />
+        <EZTextInput text="XXXXXXX" borderRadius="5px" color="gray" row="10" singleLine="false" focusColor="red"
+            rwdWidth="720" boxShadow="0 0 5px pink" />
     </EZGroup>
 </template>
 
@@ -14,4 +18,5 @@
 import EZGroup from '@/components/ezcore/EZGroup.vue';
 import EZLabel from '@/components/ezcore/EZLabel.vue';
 import EZImage from '@/components/ezcore/EZImage.vue';
+import EZTextInput from '@/components/ezcore/EZTextInput.vue';
 </script>

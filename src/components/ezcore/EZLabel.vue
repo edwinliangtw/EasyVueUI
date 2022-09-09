@@ -7,9 +7,9 @@
 <script setup>
 import EZGroup from './EZGroup.vue'
 const props = defineProps({
-    color: { type: String, default: '#000' },
-    size: { type: String, default: '1em' },
-    textShadow: { type: String, default: 'none' },
+    color: { type: String, default: '#000' },           // css color
+    size: { type: String, default: '1em' },             // css font-szie
+    textShadow: { type: String, default: 'none' },      // css text-shadow
 })
 </script>
 

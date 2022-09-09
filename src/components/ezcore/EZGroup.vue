@@ -12,11 +12,11 @@ const refWrap = ref('')
 const refMJustify = ref('')
 const refAJustify = ref('')
 const props = defineProps({
-    layout: { type: String, default: 'h' },
-    wrap: { type: String, default: 'true' },
-    vJustify: { type: String, default: 'none' },
-    hJustify: { type: String, default: 'none' },
-    gap: { type: String, default: '0' },
+    layout: { type: String, default: 'h' },         // v | h - vertical or horizontal layout
+    wrap: { type: String, default: 'true' },        // true | false - wrap content
+    vJustify: { type: String, default: 'none' },    // css justify-content - vertical
+    hJustify: { type: String, default: 'none' },    // css justify-content - horizontal
+    gap: { type: String, default: '0' },            // css gap - gap between elements
 })
 switch (props.layout) {
     case 'v': refLayout.value = 'column'; break;
