@@ -1,5 +1,5 @@
 <template>
-    <EZGroup class="ez-toggle noselect" gap="3px" @click="onClick(this)" vJustify="center">
+    <EZGroup class="ez-toggle noselect" gap="3px" @click="onClick()" vJustify="center">
         <EZGroup bg="#333" :borderRadius="borderRadius" border="1px solid white" width="15px" height="15px"
             boxShadow="0 0 5px gray">
             <EZLabel>
@@ -27,6 +27,7 @@ const props = defineProps({
     name: { type: String, required: true },
     checked: { type: String, default: 'false' }, // true | false
 })
+const emit = defineEmits(['onToggle'])
 switch (props.type) {
     case 'checkBox': borderRadius.value = '4px'; break;
     case 'radioBox': borderRadius.value = '15px'; break;
@@ -35,10 +36,10 @@ switch (props.checked) {
     case 'true': refChecked.value = true; break;
     case 'false': refChecked.value = false; break;
 }
-function onClick(thisObj) {
+function onClick() {
     if (props.type == 'checkBox') {
-        thisObj.$emit('onToggle', { name: props.name, checked: refChecked.value = !refChecked.value })
-    } else thisObj.$emit('onToggle', { name: props.name, checked: refChecked.value = true })
+        emit('onToggle', { name: props.name, checked: refChecked.value = !refChecked.value })
+    } else emit('onToggle', { name: props.name, checked: refChecked.value = true })
 }
 </script>
 
