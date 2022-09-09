@@ -11,6 +11,8 @@
         </EZGroup>
         <EZGroup width="100%" bg="pink" padding="10px" borderRadius="10px" hJustify="center">
             <EZToggle name="checkBox" type="checkBox" @onToggle="onToggle">checkBox</EZToggle>
+        </EZGroup>
+        <EZGroup width="100%" bg="pink" padding="10px" borderRadius="10px" hJustify="center">
             <EZToggle name="radioBox" type="radioBox" @onToggle="onToggle">radioBox</EZToggle>
         </EZGroup>
         <EZGroup width="100%" bg="pink" padding="10px" borderRadius="10px" hJustify="center">
@@ -36,8 +38,8 @@ import EZToggle from '@/components/ezcore/EZToggle.vue';
 import EZCheckBoxGroup from '@/components/ezcore/EZCheckBoxGroup.vue';
 import EZRadioBoxGroup from '../components/ezcore/EZRadioBoxGroup.vue';
 
-function onToggle(name, checked) {
-    console.log(name, checked)
+function onToggle(obj) {
+    console.log(obj)
 }
 function onItemsSelect(obj) {
     console.log(obj)
