@@ -18,6 +18,6 @@ body {
 
 pre {
   font-family: 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
-  font-size: .8em;
+  font-size: .8em !important;
   color: var(--theme-main);
 }
