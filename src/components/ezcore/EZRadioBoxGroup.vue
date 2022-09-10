@@ -1,5 +1,5 @@
 <template>
-    <EZGroup gap="10px" @click="$emit('onItemSelect',refSelected)">
+    <EZGroup gap="1em" @click="$emit('onItemSelect',refSelected)">
         <EZToggle type="radioBox" v-for="(val, key) in keysLabels" :key="refKey[key]" :name="key"
             :checked="refKeys[key]?'true':'false'" @onToggle="onToggle">
             {{val.label}}

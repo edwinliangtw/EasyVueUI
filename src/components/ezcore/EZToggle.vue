@@ -1,5 +1,5 @@
 <template>
-    <EZGroup noSelect="true" class="ez-toggle" gap="3px" @click="onClick()" vJustify="center">
+    <EZGroup noSelect="true" class="ez-toggle" gap=".5em" @click="onClick()" vJustify="center">
         <EZGroup bg="var(--theme-toggle-bg)" :borderRadius="borderRadius" border="1px solid white" width="15px"
             height="15px" boxShadow="0 0 5px var(--theme-toggle-shadow)">
             <EZLabel>

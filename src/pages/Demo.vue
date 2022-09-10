@@ -25,6 +25,24 @@
                 </EZLabel>
             </EZButton>
         </EZGroup>
+        <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
+            gap="10px">
+            <EZButton bg="deeppink" boxShadow="0 0 5px deeppink" padding="10px" alignSelf="center"
+                @click="refDialogOpen=!refDialogOpen">
+                <EZLabel size="1em" color="white">Show Dialog</EZLabel>
+            </EZButton>
+            <EZDialog v-if="refDialogOpen" @onClose="refDialogOpen=false" />
+            <EZButton bg="deeppink" boxShadow="0 0 5px deeppink" padding="10px" alignSelf="center"
+                @click="refAlertDialogOpen=!refAlertDialogOpen">
+                <EZLabel size="1em" color="white">Show Alert Dialog</EZLabel>
+            </EZButton>
+            <EZAlertDialog v-if="refAlertDialogOpen" @onClose="refAlertDialogOpen=false" />
+            <EZButton bg="deeppink" boxShadow="0 0 5px deeppink" padding="10px" alignSelf="center"
+                @click="refConfirmDialogOpen=!refConfirmDialogOpen">
+                <EZLabel size="1em" color="white">Show Confirm Dialog</EZLabel>
+            </EZButton>
+            <EZConfirmDialog v-if="refConfirmDialogOpen" @onClose="refConfirmDialogOpen=false" />
+        </EZGroup>
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center">
             <EZDrop color="var(--theme-main)" @onGetDropFiles="onGetDropFiles"></EZDrop>
             <EZGroup layout="v" padding="10px">
@@ -116,10 +134,16 @@ import EZRadioBoxGroup from '@/components/ezcore/EZRadioBoxGroup.vue';
 import EZSelect from '@/components/ezcore/EZSelect.vue';
 import EZDrop from '@/components/ezcore/EZDrop.vue';
 import EZTable from '@/components/ezcore/EZTable.vue';
+import EZButton from '@/components/ezcore/EZButton.vue';
+import EZImage from '@/components/ezcore/EZImage.vue';
+import EZDialog from '@/components/ezcore/EZDialog.vue';
 import { ref } from 'vue';
-import EZButton from '../components/ezcore/EZButton.vue';
-import EZImage from '../components/ezcore/EZImage.vue';
+import EZAlertDialog from '../components/ezcore/EZAlertDialog.vue';
+import EZConfirmDialog from '../components/ezcore/EZConfirmDialog.vue';
 const refDrops = ref(null)
+const refDialogOpen = ref(false)
+const refAlertDialogOpen = ref(false)
+const refConfirmDialogOpen = ref(false)
 function onGetDropFiles(obj) {
     console.log(obj)
     refDrops.value = [...obj]

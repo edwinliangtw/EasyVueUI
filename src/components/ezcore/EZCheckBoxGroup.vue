@@ -1,5 +1,5 @@
 <template>
-    <EZGroup gap="10px" @click="$emit('onItemsSelect',refSelected)">
+    <EZGroup gap="1em" @click="$emit('onItemsSelect',refSelected)">
         <EZToggle type="checkBox" v-for="(val, key, index) in keysLabels" :key="index" :name="key"
             :checked="val.checked" @onToggle="onToggle">
             {{val.label}}

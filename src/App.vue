@@ -2,7 +2,7 @@
 	<!-- container -->
 	<EZGroup layout="v" width="100%" minHeight="calc(100vh - 100px)" bg="var(--theme-main-light)">
 		<!-- nav -->
-		<EZGroup layout="h" width="100%" height="50px" bg="black" padding="10px" hJustify="space-between">
+		<EZGroup layout="h" width="100%" height="50px" bg="black" padding="10px" hJustify="space-between" zIndex="1">
 			<EZRouterLabel to="/" color="white" size="24px">
 				<EZImage src="img/vue.png" />
 				EasyVueUI
@@ -17,7 +17,7 @@
 		</EZGroup>
 		<!-- main -->
 		<EZGroup layout="h" width="100%" height="100%" bg="var(--theme-main)" boxShadow="0 0 5px var(--theme-main)">
-			<EZRouterView />
+			<EZRouterView class="dialogMode" :class="[$ez.dialogMode?'dialogModeActive':'']" />
 		</EZGroup>
 	</EZGroup>
 	<!-- footer -->
@@ -40,5 +40,14 @@ import ChatBox from '@/pages/elements/ChatBox.vue';
 <style scoped>
 .active {
 	border-bottom: 2px solid var(--theme-main-light);
+}
+
+.dialogMode {
+	filter: grayscale(0);
+	transition: filter .1s;
+}
+
+.dialogModeActive {
+	filter: grayscale(1);
 }
 </style>

@@ -3,7 +3,7 @@
         <EZGroup layout="v" gap="30px" width="100%" bg="#FFF" vJustify="center" hJustify="center" padding="50px">
             <EZGroup>
                 <EZLabel color="var(--theme-main)" size="4em">Vue3 UI 框架</EZLabel>
-                <EZLabel color="var(--theme-main-light)" size=".8em" alignSelf="end">v0.2.0</EZLabel>
+                <EZLabel color="var(--theme-main-light)" size=".8em" alignSelf="end">v0.2.1</EZLabel>
             </EZGroup>
             <EZLabel color="gray" size="1.5em">易學易用，快速建構頁面，從沒想過這麼簡單</EZLabel>
             <EZGroup gap="20px">
