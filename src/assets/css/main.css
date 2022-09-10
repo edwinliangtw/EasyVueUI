@@ -15,9 +15,3 @@ body {
 #app {
   width: 100%;
 }
-
-pre>span {
-  font-family: 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
-  font-size: .8em;
-  color: var(--theme-main);
-}

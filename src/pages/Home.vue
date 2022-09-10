@@ -36,23 +36,23 @@
             </EZGroup>
             <EZGroup layout="v" width="100%" gap="20px">
                 <EZLabel color="var(--theme-main)" size="1.3em">下載</EZLabel>
-                <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
+                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
                     overflow="scroll">
                     <pre>
-<span>git clone https://github.com/edwinliangtw/EasyVueUI.git</span></pre>
-                </EZLabel>
+git clone https://github.com/edwinliangtw/EasyVueUI.git</pre>
+                </EZGroup>
                 <EZLabel color="var(--theme-main)" size="1.3em">安裝相依套件</EZLabel>
-                <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
+                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
                     overflow="scroll">
                     <pre>
-<span>npm i</span></pre>
-                </EZLabel>
+npm i</pre>
+                </EZGroup>
                 <EZLabel color="var(--theme-main)" size="1.3em">運行專案</EZLabel>
-                <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
+                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
                     overflow="scroll">
                     <pre>
-<span>npm run dev</span></pre>
-                </EZLabel>
+npm run dev</pre>
+                </EZGroup>
             </EZGroup>
         </EZGroup>
     </EZGroup>
