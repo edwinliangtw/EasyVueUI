@@ -8,7 +8,8 @@
             <EZGroup layout="v" width="100%" gap="20px">
                 <!-- EZComponent -->
                 <EZLabel color="deeppink" size="1.3em">EZComponent Props</EZLabel>
-                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll">
+                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll"
+                    color="deeppink" size=".8em">
                     <pre>
 position: { type: String, default: 'relative' },    // css position
 x: { type: String, default: '0' },                  // css left
@@ -34,7 +35,8 @@ rwdWidth: { type: String, default: '' },            // number without unit - rwd
                 </EZLabel>
                 <!-- EZGroup -->
                 <EZLabel color="deeppink" size="1.3em">EZGroup Props</EZLabel>
-                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll">
+                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll"
+                    color="deeppink" size=".8em">
                     <pre>
 layout: { type: String, default: 'h' },             // v | h - vertical or horizontal layout
 wrap: { type: String, default: 'true' },            // true | false - wrap content
@@ -44,7 +46,8 @@ gap: { type: String, default: '0' },                // css gap - gap between ele
                 </EZLabel>
                 <!-- EZImage -->
                 <EZLabel color="deeppink" size="1.3em">EZImage Props (extends EZGroup)</EZLabel>
-                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll">
+                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll"
+                    color="deeppink" size=".8em">
                     <pre>
 src: { type: String, required: true },              // html src
 width: { type: String, default: '' },               // css width
@@ -52,7 +55,8 @@ height: { type: String, default: '' },              // css height </pre>
                 </EZLabel>
                 <!-- EZLabel -->
                 <EZLabel color="deeppink" size="1.3em">EZLabel Props (extends EZGroup)</EZLabel>
-                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll">
+                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll"
+                    color="deeppink" size=".8em">
                     <pre>
 color: { type: String, default: '#000' },           // css color
 size: { type: String, default: '1em' },             // css font-size
@@ -61,13 +65,15 @@ textShadow: { type: String, default: 'none' },      // css text-shadow </pre>
                 <!-- EZRouterLabel -->
                 <EZLabel color="deeppink" size="1.3em">EZRouterLabel Props (extends RouterLink, implements EZLabel)
                 </EZLabel>
-                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll">
+                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll"
+                    color="deeppink" size=".8em">
                     <pre>
 include all RouterLink props</pre>
                 </EZLabel>
                 <!-- EZButton -->
                 <EZLabel color="deeppink" size="1.3em">EZButton Props (extends EZGroup)</EZLabel>
-                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll">
+                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll"
+                    color="deeppink" size=".8em">
                     <pre>
 include all EZGroup props</pre>
                 </EZLabel>

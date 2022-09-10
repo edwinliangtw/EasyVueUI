@@ -33,17 +33,20 @@
             </EZGroup>
             <EZGroup layout="v" width="100%" gap="20px">
                 <EZLabel color="deeppink" size="1.3em">下載</EZLabel>
-                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll">
+                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll"
+                    color="deeppink" size=".8em">
                     <pre>
 git clone https://github.com/edwinliangtw/EasyVueUI.git</pre>
                 </EZLabel>
                 <EZLabel color="deeppink" size="1.3em">安裝相依套件</EZLabel>
-                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll">
+                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll"
+                    color="deeppink" size=".8em">
                     <pre>
 npm i</pre>
                 </EZLabel>
                 <EZLabel color="deeppink" size="1.3em">運行專案</EZLabel>
-                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll">
+                <EZLabel bg="pink" opacity=".8" padding="10px" borderRadius="10px" width="100%" overflow="scroll"
+                    color="deeppink" size=".8em">
                     <pre>
 npm run dev</pre>
                 </EZLabel>
