@@ -6,6 +6,12 @@
             <EZSelect width="200px" @onSelect="onSelect" bg="deeppink" />
         </EZGroup>
         <EZGroup width="100%" bg="pink" padding="10px" borderRadius="10px" hJustify="center">
+            <EZDrop color="deeppink" @onGetDropFiles="onGetDropFiles"></EZDrop>
+            <EZGroup layout="v" padding="10px">
+                <EZLabel size="1em" color="gray" v-for="file in refDrops">{{file.name}}</EZLabel>
+            </EZGroup>
+        </EZGroup>
+        <EZGroup width="100%" bg="pink" padding="10px" borderRadius="10px" hJustify="center">
             <EZTextInput text="SingleLine" borderRadius="5px" bg="rgba(255,255,255,.5)" color="gray" focusColor="blue"
                 rwdWidth="720" />
         </EZGroup>
@@ -42,7 +48,13 @@ import EZToggle from '@/components/ezcore/EZToggle.vue';
 import EZCheckBoxGroup from '@/components/ezcore/EZCheckBoxGroup.vue';
 import EZRadioBoxGroup from '@/components/ezcore/EZRadioBoxGroup.vue';
 import EZSelect from '@/components/ezcore/EZSelect.vue';
-
+import EZDrop from '../components/ezcore/EZDrop.vue';
+import { ref } from 'vue';
+const refDrops = ref(null)
+function onGetDropFiles(obj) {
+    console.log(obj)
+    refDrops.value = [...obj]
+}
 function onSelect(obj) {
     console.log(obj)
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="ez-component" :title="title">
+    <div class="ez-component" :title="title" :class="{noselect:refNoSelect}">
         <slot>&nbsp;</slot>
     </div>
 </template>
@@ -8,6 +8,7 @@
 import { onMounted, onUnmounted, ref } from 'vue';
 const refCursor = ref('')
 const refWidth = ref('')
+const refNoSelect = ref('')
 const props = defineProps({
     position: { type: String, default: 'relative' },    // css position
     x: { type: String, default: '0' },                  // css left
@@ -30,10 +31,15 @@ const props = defineProps({
     alignSelf: { type: String, default: 'auto' },       // css align-self
     title: { type: String, default: '' },               // html title
     rwdWidth: { type: String, default: '' },            // number without unit - rwd break point setting
+    noSelect: { type: String, default: 'false' },       // true | false - enable text selection
 })
 switch (props.cursorEnable) {
     case 'true': refCursor.value = 'pointer'; break;
     case 'false': refCursor.value = ''; break;
+}
+switch (props.noSelect) {
+    case 'true': refNoSelect.value = true; break;
+    case 'false': refNoSelect.value = false; break;
 }
 refWidth.value = props.width
 if (props.rwdWidth) {
@@ -71,5 +77,20 @@ if (props.rwdWidth) {
     cursor: v-bind(refCursor);
     opacity: v-bind(opacity);
     align-self: v-bind(alignSelf);
+}
+
+.noselect {
+    /* iOS Safari */
+    -webkit-touch-callout: none;
+    /* Safari */
+    -webkit-user-select: none;
+    /* Konqueror HTML */
+    -khtml-user-select: none;
+    /* Old versions of Firefox */
+    -moz-user-select: none;
+    /* Internet Explorer/Edge */
+    -ms-user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    user-select: none;
 }
 </style>

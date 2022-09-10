@@ -1,5 +1,5 @@
 <template>
-    <EZGroup class="ez-toggle noselect" gap="3px" @click="onClick()" vJustify="center">
+    <EZGroup noSelect="true" class="ez-toggle" gap="3px" @click="onClick()" vJustify="center">
         <EZGroup bg="#333" :borderRadius="borderRadius" border="1px solid white" width="15px" height="15px"
             boxShadow="0 0 5px gray">
             <EZLabel>
@@ -67,20 +67,5 @@ function onClick() {
     height: 9px;
     background: #FFF;
     border-radius: 9px;
-}
-
-.noselect {
-    /* iOS Safari */
-    -webkit-touch-callout: none;
-    /* Safari */
-    -webkit-user-select: none;
-    /* Konqueror HTML */
-    -khtml-user-select: none;
-    /* Old versions of Firefox */
-    -moz-user-select: none;
-    /* Internet Explorer/Edge */
-    -ms-user-select: none;
-    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    user-select: none;
 }
 </style>

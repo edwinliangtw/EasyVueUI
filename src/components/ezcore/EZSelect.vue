@@ -1,5 +1,5 @@
 <template>
-    <EZGroup class="noselect" layout="v" @mouseleave="addOutsideEvent()" @mouseenter="removeOutsideEvent()">
+    <EZGroup layout="v" noSelect="true" @mouseleave="addOutsideEvent()" @mouseenter="removeOutsideEvent()">
         <EZGroup hJustify="space-between" width="100%" :bg="bg" padding="5px 10px" cursorEnable="true"
             :borderRadius="showSelection?'5px 5px 0 0':'5px'" @click="showSelection=!showSelection"
             boxShadow="0 0 5px gray" gap="10px">
@@ -71,20 +71,5 @@ function removeOutsideEvent() {
     border-bottom: 2px solid white;
     border-right: 2px solid white;
     transform: rotate(45deg);
-}
-
-.noselect {
-    /* iOS Safari */
-    -webkit-touch-callout: none;
-    /* Safari */
-    -webkit-user-select: none;
-    /* Konqueror HTML */
-    -khtml-user-select: none;
-    /* Old versions of Firefox */
-    -moz-user-select: none;
-    /* Internet Explorer/Edge */
-    -ms-user-select: none;
-    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    user-select: none;
 }
 </style>
