@@ -39,19 +39,19 @@
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
                     overflow="scroll">
                     <pre>
-git clone https://github.com/edwinliangtw/EasyVueUI.git</pre>
+<span>git clone https://github.com/edwinliangtw/EasyVueUI.git</span></pre>
                 </EZLabel>
                 <EZLabel color="var(--theme-main)" size="1.3em">安裝相依套件</EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
                     overflow="scroll">
                     <pre>
-npm i</pre>
+<span>npm i</span></pre>
                 </EZLabel>
                 <EZLabel color="var(--theme-main)" size="1.3em">運行專案</EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
                     overflow="scroll">
                     <pre>
-npm run dev</pre>
+<span>npm run dev</span></pre>
                 </EZLabel>
             </EZGroup>
         </EZGroup>

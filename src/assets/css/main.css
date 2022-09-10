@@ -16,8 +16,8 @@ body {
   width: 100%;
 }
 
-pre {
+pre>span {
   font-family: 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
-  font-size: .8em !important;
+  font-size: .8em;
   color: var(--theme-main);
 }
