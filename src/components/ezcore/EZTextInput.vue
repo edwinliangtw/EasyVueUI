@@ -32,7 +32,7 @@ const props = defineProps({
     margin: { type: String, default: '0' },
     border: { type: String, default: '1px solid gray' },
     borderRadius: { type: String, default: '0' },
-    boxShadow: { type: String, default: '0 0 5px gray' },
+    boxShadow: { type: String, default: '0 0 5px var(--theme-textinput-shadow)' },
     zIndex: { type: String, default: '' },
     opacity: { type: String, default: '1' },
     alignSelf: { type: String, default: 'auto' },

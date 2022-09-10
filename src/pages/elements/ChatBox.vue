@@ -1,6 +1,6 @@
 <template>
     <EZGroup class="chatbox" :class="{chatboxActive:refOpen}" opacity=".95">
-        <EZGroup bg="pink" boxShadow="0 0 5px pink">
+        <EZGroup bg="var(--theme-main-light)" boxShadow="0 0 5px var(--theme-main-light)">
             <iframe src="https://www3.cbox.ws/box/?boxid=3521042&boxtag=YNTNWb" allowtransparency="yes" allow="autoplay"
                 frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
         </EZGroup>

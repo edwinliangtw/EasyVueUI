@@ -1,6 +1,12 @@
-/* @import "./base.css"; */
-
 /** global 設定 */
+:root {
+  --theme-main: #5d5f7e;
+  --theme-main-light: #D6DBDF;
+  --theme-textinput-shadow: var(--theme-main);
+  --theme-toggle-bg: var(--theme-main);
+  --theme-toggle-shadow: var(--theme-main);
+}
+
 body {
   margin: 0;
   font-family: 'Microsoft JhengHei', Arial, Helvetica, sans-serif;

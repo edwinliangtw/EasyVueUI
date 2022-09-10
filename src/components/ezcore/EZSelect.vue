@@ -1,8 +1,8 @@
 <template>
     <EZGroup layout="v" noSelect="true" @mouseleave="addOutsideEvent()" @mouseenter="removeOutsideEvent()">
-        <EZGroup hJustify="space-between" width="100%" :bg="bg" padding="5px 10px" cursorEnable="true"
+        <EZGroup class="ez-select" hJustify="space-between" width="100%" :bg="bg" padding="5px 10px" cursorEnable="true"
             :borderRadius="showSelection?'5px 5px 0 0':'5px'" @click="showSelection=!showSelection"
-            boxShadow="0 0 5px gray" gap="10px">
+            :boxShadow="boxShadow" gap="10px">
             <EZLabel color="white">{{title}}</EZLabel>
             <EZGroup :class="[showSelection?'symbol-arrow-up':'symbol-arrow-down']" />
         </EZGroup>
@@ -35,8 +35,9 @@ defineProps({
             }
         }
     },
-    bg: { type: String, default: '#333' },
+    bg: { type: String, default: 'black' },
     color: { type: String, default: '#FFF' },
+    boxShadow: { type: String, default: '0 0 5px black' },
 })
 function close() {
     showSelection.value = false;

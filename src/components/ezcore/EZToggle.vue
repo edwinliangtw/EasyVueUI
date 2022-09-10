@@ -1,7 +1,7 @@
 <template>
     <EZGroup noSelect="true" class="ez-toggle" gap="3px" @click="onClick()" vJustify="center">
-        <EZGroup bg="#333" :borderRadius="borderRadius" border="1px solid white" width="15px" height="15px"
-            boxShadow="0 0 5px gray">
+        <EZGroup bg="var(--theme-toggle-bg)" :borderRadius="borderRadius" border="1px solid white" width="15px"
+            height="15px" boxShadow="0 0 5px var(--theme-toggle-shadow)">
             <EZLabel>
                 <template v-if="refChecked">
                     <div v-if="type=='checkBox'" class="symbol-check"></div>

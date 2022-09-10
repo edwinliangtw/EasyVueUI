@@ -1,6 +1,6 @@
 <template>
 	<!-- container -->
-	<EZGroup layout="v" width="100%" minHeight="calc(100vh - 100px)" bg="pink">
+	<EZGroup layout="v" width="100%" minHeight="calc(100vh - 100px)" bg="var(--theme-main-light)">
 		<!-- nav -->
 		<EZGroup layout="h" width="100%" height="50px" bg="black" padding="10px" hJustify="space-between">
 			<EZRouterLabel to="/" color="white" size="24px">
@@ -8,14 +8,15 @@
 				EasyVueUI
 			</EZRouterLabel>
 			<EZGroup gap="10px" vJustify="center">
-				<EZRouterLabel to="/" color="deeppink" size="16px" activeClass="active">首頁</EZRouterLabel>
+				<EZRouterLabel to="/" color="var(--theme-main-light)" size="16px" activeClass="active">首頁
+				</EZRouterLabel>
 				<EZRouterLabel to="/demo" color="white" size="16px" activeClass="active">展示</EZRouterLabel>
 				<EZRouterLabel to="/doc" color="white" size="16px" activeClass="active">文件</EZRouterLabel>
 				<EZRouterLabel to="/about" color="white" size="16px" activeClass="active">關於</EZRouterLabel>
 			</EZGroup>
 		</EZGroup>
 		<!-- main -->
-		<EZGroup layout="h" width="100%" height="100%" bg="deeppink" boxShadow="0 0 5px deeppink">
+		<EZGroup layout="h" width="100%" height="100%" bg="var(--theme-main)" boxShadow="0 0 5px var(--theme-main)">
 			<EZRouterView />
 		</EZGroup>
 	</EZGroup>
@@ -38,6 +39,6 @@ import ChatBox from '@/pages/elements/ChatBox.vue';
 
 <style scoped>
 .active {
-	border-bottom: 2px solid deeppink;
+	border-bottom: 2px solid var(--theme-main-light);
 }
 </style>
