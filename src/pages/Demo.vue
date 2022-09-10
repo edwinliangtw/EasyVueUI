@@ -11,6 +11,40 @@
                 <EZLabel size="1em" color="gray" v-for="file in refDrops">{{file.name}}</EZLabel>
             </EZGroup>
         </EZGroup>
+        <EZGroup width="100%" bg="pink" padding="10px" borderRadius="10px" hJustify="center" gap="10px"
+            overflow="scroll">
+            <EZTable border="1px dotted deeppink" width="400px" height="200px" minWidth="400px">
+                <tr>
+                    <td>
+                        <EZGroup width="100%" height="100%" hJustify="flex-start" vJustify="flex-start">
+                            <EZLabel size="1em" color="deeppink">left top</EZLabel>
+                        </EZGroup>
+                    </td>
+                    <td>
+                        <EZGroup width="100%" height="100%" hJustify="center" vJustify="center">
+                            <EZLabel size="1em" color="deeppink">center</EZLabel>
+                        </EZGroup>
+                    </td>
+                    <td>
+                        <EZGroup width="100%" height="100%" hJustify="flex-end" vJustify="flex-end">
+                            <EZLabel size="1em" color="deeppink">right bottom</EZLabel>
+                        </EZGroup>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <EZGroup width="100%" height="100%" hJustify="flex-start" vJustify="flex-end">
+                            <EZLabel size="1em" color="deeppink">Hello</EZLabel>
+                        </EZGroup>
+                    </td>
+                    <td colspan="2">
+                        <EZGroup width="100%" height="100%" hJustify="center" vJustify="center" bg="deeppink">
+                            <EZLabel size="1em" color="white">Hello</EZLabel>
+                        </EZGroup>
+                    </td>
+                </tr>
+            </EZTable>
+        </EZGroup>
         <EZGroup width="100%" bg="pink" padding="10px" borderRadius="10px" hJustify="center">
             <EZTextInput text="SingleLine" borderRadius="5px" bg="rgba(255,255,255,.5)" color="gray" focusColor="blue"
                 rwdWidth="720" />
@@ -48,7 +82,8 @@ import EZToggle from '@/components/ezcore/EZToggle.vue';
 import EZCheckBoxGroup from '@/components/ezcore/EZCheckBoxGroup.vue';
 import EZRadioBoxGroup from '@/components/ezcore/EZRadioBoxGroup.vue';
 import EZSelect from '@/components/ezcore/EZSelect.vue';
-import EZDrop from '../components/ezcore/EZDrop.vue';
+import EZDrop from '@/components/ezcore/EZDrop.vue';
+import EZTable from '@/components/ezcore/EZTable.vue';
 import { ref } from 'vue';
 const refDrops = ref(null)
 function onGetDropFiles(obj) {

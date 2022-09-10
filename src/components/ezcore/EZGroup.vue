@@ -17,6 +17,7 @@ const props = defineProps({
     vJustify: { type: String, default: 'none' },    // css justify-content - vertical
     hJustify: { type: String, default: 'none' },    // css justify-content - horizontal
     gap: { type: String, default: '0' },            // css gap - gap between elements
+    overflow: { type: String, default: 'none' },    // css overflow
 })
 switch (props.layout) {
     case 'v': refLayout.value = 'column'; break;
@@ -45,5 +46,6 @@ switch (props.wrap) {
     justify-content: v-bind(refMJustify);
     align-items: v-bind(refAJustify);
     gap: v-bind(gap);
+    overflow: v-bind(overflow);
 }
 </style>
