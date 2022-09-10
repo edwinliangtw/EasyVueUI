@@ -8,9 +8,8 @@
             <EZGroup layout="v" width="100%" gap="20px">
                 <!-- EZComponent -->
                 <EZLabel color="var(--theme-main)" size="1.3em">EZComponent Props</EZLabel>
-                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll">
-                    <pre>
+                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%">
+                    <pre style='overflow:auto'>
 position: { type: String, default: 'relative' },    // css position
 x: { type: String, default: '0' },                  // css left
 y: { type: String, default: '0' },                  // css top
@@ -35,9 +34,8 @@ rwdWidth: { type: String, default: '' },            // number without unit - rwd
                 </EZGroup>
                 <!-- EZGroup -->
                 <EZLabel color="var(--theme-main)" size="1.3em">EZGroup Props</EZLabel>
-                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll">
-                    <pre>
+                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%">
+                    <pre style='overflow:auto'>
 layout: { type: String, default: 'h' },             // v | h - vertical or horizontal layout
 wrap: { type: String, default: 'true' },            // true | false - wrap content
 vJustify: { type: String, default: 'none' },        // css justify-content - vertical
@@ -46,18 +44,16 @@ gap: { type: String, default: '0' },                // css gap - gap between ele
                 </EZGroup>
                 <!-- EZImage -->
                 <EZLabel color="var(--theme-main)" size="1.3em">EZImage Props (extends EZGroup)</EZLabel>
-                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll">
-                    <pre>
+                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%">
+                    <pre style='overflow:auto'>
 src: { type: String, required: true },              // html src
 width: { type: String, default: '' },               // css width
 height: { type: String, default: '' },              // css height </pre>
                 </EZGroup>
                 <!-- EZLabel -->
                 <EZLabel color="var(--theme-main)" size="1.3em">EZLabel Props (extends EZGroup)</EZLabel>
-                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll">
-                    <pre>
+                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%">
+                    <pre style='overflow:auto'>
 color: { type: String, default: '#000' },           // css color
 size: { type: String, default: '1em' },             // css font-size
 textShadow: { type: String, default: 'none' },      // css text-shadow </pre>
@@ -66,16 +62,14 @@ textShadow: { type: String, default: 'none' },      // css text-shadow </pre>
                 <EZLabel color="var(--theme-main)" size="1.3em">EZRouterLabel Props (extends RouterLink, implements
                     EZLabel)
                 </EZLabel>
-                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll">
-                    <pre>
+                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%">
+                    <pre style='overflow:auto'>
 include all RouterLink props</pre>
                 </EZGroup>
                 <!-- EZButton -->
                 <EZLabel color="var(--theme-main)" size="1.3em">EZButton Props (extends EZGroup)</EZLabel>
-                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll">
-                    <pre>
+                <EZGroup bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%">
+                    <pre style='overflow:auto'>
 include all EZGroup props</pre>
                 </EZGroup>
             </EZGroup>
