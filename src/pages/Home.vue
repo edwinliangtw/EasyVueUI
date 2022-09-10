@@ -37,19 +37,19 @@
             <EZGroup layout="v" width="100%" gap="20px">
                 <EZLabel color="var(--theme-main)" size="1.3em">下載</EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll" color="var(--theme-main)" size=".8em">
+                    overflow="scroll">
                     <pre>
 git clone https://github.com/edwinliangtw/EasyVueUI.git</pre>
                 </EZLabel>
                 <EZLabel color="var(--theme-main)" size="1.3em">安裝相依套件</EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll" color="var(--theme-main)" size=".8em">
+                    overflow="scroll">
                     <pre>
 npm i</pre>
                 </EZLabel>
                 <EZLabel color="var(--theme-main)" size="1.3em">運行專案</EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll" color="var(--theme-main)" size=".8em">
+                    overflow="scroll">
                     <pre>
 npm run dev</pre>
                 </EZLabel>

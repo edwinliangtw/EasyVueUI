@@ -9,7 +9,7 @@
                 <!-- EZComponent -->
                 <EZLabel color="var(--theme-main)" size="1.3em">EZComponent Props</EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll" color="var(--theme-main)" size=".8em">
+                    overflow="scroll">
                     <pre>
 position: { type: String, default: 'relative' },    // css position
 x: { type: String, default: '0' },                  // css left
@@ -36,7 +36,7 @@ rwdWidth: { type: String, default: '' },            // number without unit - rwd
                 <!-- EZGroup -->
                 <EZLabel color="var(--theme-main)" size="1.3em">EZGroup Props</EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll" color="var(--theme-main)" size=".8em">
+                    overflow="scroll">
                     <pre>
 layout: { type: String, default: 'h' },             // v | h - vertical or horizontal layout
 wrap: { type: String, default: 'true' },            // true | false - wrap content
@@ -47,7 +47,7 @@ gap: { type: String, default: '0' },                // css gap - gap between ele
                 <!-- EZImage -->
                 <EZLabel color="var(--theme-main)" size="1.3em">EZImage Props (extends EZGroup)</EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll" color="var(--theme-main)" size=".8em">
+                    overflow="scroll">
                     <pre>
 src: { type: String, required: true },              // html src
 width: { type: String, default: '' },               // css width
@@ -56,7 +56,7 @@ height: { type: String, default: '' },              // css height </pre>
                 <!-- EZLabel -->
                 <EZLabel color="var(--theme-main)" size="1.3em">EZLabel Props (extends EZGroup)</EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll" color="var(--theme-main)" size=".8em">
+                    overflow="scroll">
                     <pre>
 color: { type: String, default: '#000' },           // css color
 size: { type: String, default: '1em' },             // css font-size
@@ -67,14 +67,14 @@ textShadow: { type: String, default: 'none' },      // css text-shadow </pre>
                     EZLabel)
                 </EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll" color="var(--theme-main)" size=".8em">
+                    overflow="scroll">
                     <pre>
 include all RouterLink props</pre>
                 </EZLabel>
                 <!-- EZButton -->
                 <EZLabel color="var(--theme-main)" size="1.3em">EZButton Props (extends EZGroup)</EZLabel>
                 <EZLabel bg="var(--theme-main-light)" opacity=".8" padding="10px" borderRadius="10px" width="100%"
-                    overflow="scroll" color="var(--theme-main)" size=".8em">
+                    overflow="scroll">
                     <pre>
 include all EZGroup props</pre>
                 </EZLabel>
