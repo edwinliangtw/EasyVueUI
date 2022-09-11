@@ -16,7 +16,3 @@ import EZButton from './EZButton.vue';
 import EZGroup from './EZGroup.vue';
 const emit = defineEmits(['onClose'])
 </script>
-
-<style scoped>
-
-</style>

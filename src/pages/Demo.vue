@@ -47,6 +47,11 @@
                 <EZLabel size="1em" color="white">Show Color Picker</EZLabel>
             </EZButton>
             <EZColorPicker v-if="refColorPickerOpen" @onClose="onColor" />
+            <EZButton boxShadow="0 0 5px var(--theme-main)" padding="5px 10px" alignSelf="center"
+                @click="refDatePickerOpen=!refDatePickerOpen">
+                <EZLabel size="1em" color="white">Show Date Picker</EZLabel>
+            </EZButton>
+            <EZDatePicker v-if="refDatePickerOpen" @onClose="onDate" />
         </EZGroup>
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
             gap="10px">
@@ -152,13 +157,19 @@ import EZAlertDialog from '@/components/ezcore/EZAlertDialog.vue';
 import EZConfirmDialog from '@/components/ezcore/EZConfirmDialog.vue';
 import EZFileBox from '@/components/ezcore/EZFileBox.vue';
 import EZColorPicker from '../components/ezcore/EZColorPicker.vue';
+import EZDatePicker from '../components/ezcore/EZDatePicker.vue';
 const refDrops = ref(null)
 const refDialogOpen = ref(false)
 const refAlertDialogOpen = ref(false)
 const refConfirmDialogOpen = ref(false)
 const refColorPickerOpen = ref(false)
+const refDatePickerOpen = ref(false)
 function onColor(obj) {
     refColorPickerOpen.value = false;
+    console.log(obj)
+}
+function onDate(obj) {
+    refDatePickerOpen.value = false;
     console.log(obj)
 }
 function onFile(obj) {
