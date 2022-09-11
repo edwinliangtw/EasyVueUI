@@ -2,7 +2,7 @@
     <teleport to="body">
         <EZGroup class="ez-dialog" width="100%" height="100%" bg="rgba(255,255,255,.5)" hJustify="center"
             vJustify="center" padding="10px" boxShadow="0 0 5px var(--theme-main)" zIndex="9999999">
-            <EZGroup layout="v" width="300px" bg="var(--theme-main-light)" borderRadius="7px"
+            <EZGroup layout="v" :width="width" minWidth="300px" bg="var(--theme-main-light)" borderRadius="7px"
                 boxShadow="0 0 5px var(--theme-main)">
                 <EZGroup bg="var(--theme-main)" borderRadius="5px 5px 0 0" padding="5px 10px" hJustify="space-between">
                     <EZGroup></EZGroup>
@@ -30,6 +30,7 @@ import EZLabel from './EZLabel.vue';
 const emit = defineEmits(['onClose'])
 defineProps({
     titleText: { type: String, default: 'title' },
+    width: { type: String, default: 'auto' },
 })
 const $ez = getCurrentInstance().appContext.config.globalProperties.$ez
 $ez.dialogMode = true
