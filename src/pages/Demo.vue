@@ -66,6 +66,23 @@
             <EZSpinner border="3px solid var(--theme-main)" filter="drop-shadow(0 0 5px var(--theme-main))" />
             <EZSpinner border="3px solid var(--theme-main)" filter="blur(5px)" />
         </EZGroup>
+        <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
+            gap="10px">
+            <EZCarousel width="100%" height="300px" bg="black">
+                <EZGroup layout="v" bg="red" hJustify="center" vJustify="center" gap="10px">
+                    <EZLabel color="white" size="2em">Carousel A</EZLabel>
+                    <EZButton bg="red" border="1px solid white">
+                        <EZLabel color="white">Click Me</EZLabel>
+                    </EZButton>
+                </EZGroup>
+                <EZGroup layout="v" bg="green" hJustify="center" vJustify="center">
+                    <EZLabel color="white" size="2em">Carousel B</EZLabel>
+                </EZGroup>
+                <EZGroup layout="v" bg="blue" hJustify="center" vJustify="center">
+                    <EZLabel color="white" size="2em">Carousel C</EZLabel>
+                </EZGroup>
+            </EZCarousel>
+        </EZGroup>
         <EZGroup layout="v" width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px"
             hJustify="center">
             <EZDrop @onGetDropFiles="onGetDropFiles" />
@@ -165,9 +182,10 @@ import EZDialog from '@/components/ezcore/EZDialog.vue';
 import EZAlertDialog from '@/components/ezcore/EZAlertDialog.vue';
 import EZConfirmDialog from '@/components/ezcore/EZConfirmDialog.vue';
 import EZFileBox from '@/components/ezcore/EZFileBox.vue';
-import EZColorPicker from '../components/ezcore/EZColorPicker.vue';
-import EZDatePicker from '../components/ezcore/EZDatePicker.vue';
-import EZSpinner from '../components/ezcore/EZSpinner.vue';
+import EZColorPicker from '@/components/ezcore/EZColorPicker.vue';
+import EZDatePicker from '@/components/ezcore/EZDatePicker.vue';
+import EZSpinner from '@/components/ezcore/EZSpinner.vue';
+import EZCarousel from '@/components/ezcore/EZCarousel.vue';
 const refDrops = ref(null)
 const refDialogOpen = ref(false)
 const refAlertDialogOpen = ref(false)
