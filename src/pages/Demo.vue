@@ -8,13 +8,13 @@
         </EZGroup>
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
             gap="10px">
-            <EZButton bg="#EC7063" boxShadow="0 0 5px #EC7063" padding="10px" alignSelf="center">
+            <EZButton bg="#EC7063" boxShadow="0 0 5px #EC7063" padding="5px 10px" alignSelf="center">
                 <EZLabel size="1em" color="white">Red</EZLabel>
             </EZButton>
-            <EZButton bg="#2ECC71" boxShadow="0 0 5px #2ECC71" padding="10px" alignSelf="center">
+            <EZButton bg="#2ECC71" boxShadow="0 0 5px #2ECC71" padding="5px 10px" alignSelf="center">
                 <EZLabel size="1em" color="white">Green</EZLabel>
             </EZButton>
-            <EZButton bg="#5DADE2" boxShadow="0 0 5px #5DADE2" padding="10px" alignSelf="center">
+            <EZButton bg="#5DADE2" boxShadow="0 0 5px #5DADE2" padding="5px 10px" alignSelf="center">
                 <EZLabel size="1em" color="white">Blue</EZLabel>
             </EZButton>
             <EZButton bg="var(--theme-main-light)" boxShadow="0 0 5px var(--theme-main-light)" padding="10px"
@@ -27,24 +27,29 @@
         </EZGroup>
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
             gap="10px">
-            <EZButton bg="deeppink" boxShadow="0 0 5px deeppink" padding="10px" alignSelf="center"
+            <EZButton boxShadow="0 0 5px var(--theme-main)" padding="5px 10px" alignSelf="center"
                 @click="refDialogOpen=!refDialogOpen">
                 <EZLabel size="1em" color="white">Show Dialog</EZLabel>
             </EZButton>
             <EZDialog v-if="refDialogOpen" @onClose="refDialogOpen=false" />
-            <EZButton bg="deeppink" boxShadow="0 0 5px deeppink" padding="10px" alignSelf="center"
+            <EZButton boxShadow="0 0 5px var(--theme-main)" padding="5px 10px" alignSelf="center"
                 @click="refAlertDialogOpen=!refAlertDialogOpen">
                 <EZLabel size="1em" color="white">Show Alert Dialog</EZLabel>
             </EZButton>
             <EZAlertDialog v-if="refAlertDialogOpen" @onClose="refAlertDialogOpen=false" />
-            <EZButton bg="deeppink" boxShadow="0 0 5px deeppink" padding="10px" alignSelf="center"
+            <EZButton boxShadow="0 0 5px var(--theme-main)" padding="5px 10px" alignSelf="center"
                 @click="refConfirmDialogOpen=!refConfirmDialogOpen">
                 <EZLabel size="1em" color="white">Show Confirm Dialog</EZLabel>
             </EZButton>
             <EZConfirmDialog v-if="refConfirmDialogOpen" @onClose="refConfirmDialogOpen=false" />
         </EZGroup>
-        <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center">
-            <EZDrop color="var(--theme-main)" @onGetDropFiles="onGetDropFiles"></EZDrop>
+        <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
+            gap="10px">
+            <EZFileBox @onFile="onFile" />
+        </EZGroup>
+        <EZGroup layout="v" width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px"
+            hJustify="center">
+            <EZDrop @onGetDropFiles="onGetDropFiles" />
             <EZGroup layout="v" padding="10px">
                 <EZLabel size="1em" color="gray" v-for="file in refDrops">{{file.name}}</EZLabel>
             </EZGroup>
@@ -73,13 +78,13 @@
                     <td>
                         <EZGroup width="100%" height="100%" hJustify="center" vJustify="flex-end" gap="10px"
                             padding="20px">
-                            <EZButton bg="var(--theme-main)" alignSelf="start">
+                            <EZButton alignSelf="start">
                                 <EZLabel size="1em" color="white">Edwin</EZLabel>
                             </EZButton>
-                            <EZButton bg="var(--theme-main)">
+                            <EZButton>
                                 <EZLabel size="1em" color="white">Edwin</EZLabel>
                             </EZButton>
-                            <EZButton bg="var(--theme-main)" alignSelf="center">
+                            <EZButton alignSelf="center">
                                 <EZLabel size="1em" color="white">Edwin</EZLabel>
                             </EZButton>
                         </EZGroup>
@@ -125,6 +130,7 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import EZGroup from '@/components/ezcore/EZGroup.vue';
 import EZLabel from '@/components/ezcore/EZLabel.vue';
 import EZTextInput from '@/components/ezcore/EZTextInput.vue';
@@ -137,13 +143,16 @@ import EZTable from '@/components/ezcore/EZTable.vue';
 import EZButton from '@/components/ezcore/EZButton.vue';
 import EZImage from '@/components/ezcore/EZImage.vue';
 import EZDialog from '@/components/ezcore/EZDialog.vue';
-import { ref } from 'vue';
-import EZAlertDialog from '../components/ezcore/EZAlertDialog.vue';
-import EZConfirmDialog from '../components/ezcore/EZConfirmDialog.vue';
+import EZAlertDialog from '@/components/ezcore/EZAlertDialog.vue';
+import EZConfirmDialog from '@/components/ezcore/EZConfirmDialog.vue';
+import EZFileBox from '@/components/ezcore/EZFileBox.vue';
 const refDrops = ref(null)
 const refDialogOpen = ref(false)
 const refAlertDialogOpen = ref(false)
 const refConfirmDialogOpen = ref(false)
+function onFile(obj) {
+    console.log(obj)
+}
 function onGetDropFiles(obj) {
     console.log(obj)
     refDrops.value = [...obj]

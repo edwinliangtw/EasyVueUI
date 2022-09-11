@@ -1,15 +1,15 @@
 <template>
     <teleport to="body">
-        <EZGroup class="ez-dialog" width="100%" height="100%" bg="rgba(0,0,0,.8)" hJustify="center" vJustify="center"
-            padding="10px" boxShadow="0 0 5px var(--theme-main)" zIndex="9999999">
+        <EZGroup class="ez-dialog" width="100%" height="100%" bg="rgba(255,255,255,.5)" hJustify="center"
+            vJustify="center" padding="10px" boxShadow="0 0 5px var(--theme-main)" zIndex="9999999">
             <EZGroup layout="v" width="300px" bg="var(--theme-main-light)" borderRadius="7px"
                 boxShadow="0 0 5px var(--theme-main)">
                 <EZGroup bg="var(--theme-main)" borderRadius="5px 5px 0 0" padding="5px 10px" hJustify="space-between">
                     <EZGroup></EZGroup>
                     <EZLabel color="white">{{titleText}}</EZLabel>
                     <EZGroup>
-                        <EZGroup position="absolute" x="-10px" @click="$emit('onClose'),$ez.dialogMode = false"
-                            width="20px" height="20px" cursorEnable="true">
+                        <EZGroup position="absolute" x="-10px" @click="$emit('onClose')" width="20px" height="20px"
+                            cursorEnable="true">
                             <EZGroup class="symbol-arrow-down" />
                             <EZGroup class="symbol-arrow-up" />
                         </EZGroup>

@@ -7,7 +7,8 @@
             <EZGroup :class="[showSelection?'symbol-arrow-up':'symbol-arrow-down']" />
         </EZGroup>
         <EZGroup v-if="showSelection" zIndex="9999999" width="100%">
-            <EZGroup layout="v" position="absolute" width="100%">
+            <EZGroup layout="v" position="absolute" width="100%" boxShadow="0 0 5px var(--theme-main)"
+                borderRadius="0 0 5px 5px">
                 <EZButton v-for="(item, key, index) in items" :key="index"
                     :borderRadius="index==Object.keys(items).length-1?'0 0 5px 5px':'0px'" :bg="bg" width="100%"
                     padding="5px" @click="$emit('onSelect',[key, item.label]), showSelection=false, title = item.label">
@@ -37,7 +38,7 @@ defineProps({
     },
     bg: { type: String, default: 'black' },
     color: { type: String, default: '#FFF' },
-    boxShadow: { type: String, default: '0 0 5px black' },
+    boxShadow: { type: String, default: '0 0 5px var(--theme-main)' },
 })
 function close() {
     showSelection.value = false;

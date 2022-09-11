@@ -1,6 +1,6 @@
 <template>
-    <EZGroup class="ez-button" padding="5px" bg="#666" :borderRadius="borderRadius" hJustify="center" vJustify="center"
-        @mouseenter="refOpacity = '.2'" @mouseleave="refOpacity = '.1'" @mousedown="refOpacity = '0'"
+    <EZGroup class="ez-button" padding="5px" bg="var(--theme-main)" :borderRadius="borderRadius" hJustify="center"
+        vJustify="center" @mouseenter="refOpacity = '.2'" @mouseleave="refOpacity = '.1'" @mousedown="refOpacity = '0'"
         @mouseup="refOpacity = '.2'">
         <slot>Button</slot>
         <EZGroup position="absolute" width="100%" height="100%" bg="white" :opacity="refOpacity"

@@ -1,5 +1,5 @@
 <template>
-    <EZGroup noSelect="true" class="ez-drop" width="300px" height="300px" border="1px solid gray" borderRadius="20px"
+    <EZGroup noSelect="true" class="ez-drop" width="100%" height="300px" border="1px solid gray" borderRadius="20px"
         hJustify="center" vJustify="center" @drop="drop_handler" @dragover="dragover_handler">
         <EZLabel :color="color" size="1em">
             <slot>Drop File Here</slot>
@@ -14,7 +14,7 @@ import EZLabel from './EZLabel.vue';
 const refFiles = ref([])
 const emit = defineEmits(['onGetDropFiles'])
 const props = defineProps({
-    color: { type: String, default: '#000' },           // css color
+    color: { type: String, default: 'var(--theme-main)' },           // css color
 })
 function dragover_handler(ev) {
     ev.preventDefault();
