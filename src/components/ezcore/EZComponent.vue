@@ -32,6 +32,7 @@ const props = defineProps({
     title: { type: String, default: '' },               // html title
     rwdWidth: { type: String, default: '' },            // number without unit - rwd break point setting
     noSelect: { type: String, default: 'false' },       // true | false - enable text selection
+    filter: { type: String, default: '' },          // css filter
 })
 switch (props.cursorEnable) {
     case 'true': refCursor.value = 'pointer'; break;
@@ -77,6 +78,7 @@ if (props.rwdWidth) {
     cursor: v-bind(refCursor);
     opacity: v-bind(opacity);
     align-self: v-bind(alignSelf);
+    filter: v-bind(filter);
 }
 
 .noselect {

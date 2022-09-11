@@ -57,6 +57,15 @@
             gap="10px">
             <EZFileBox @onFile="onFile" />
         </EZGroup>
+        <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
+            gap="10px">
+            <EZSpinner border="1px solid var(--theme-main)" />
+            <EZSpinner border="3px solid var(--theme-main)" />
+            <EZSpinner border="5px solid var(--theme-main)" />
+            <EZSpinner border="13px solid var(--theme-main)" />
+            <EZSpinner border="3px solid var(--theme-main)" filter="drop-shadow(0 0 5px var(--theme-main))" />
+            <EZSpinner border="3px solid var(--theme-main)" filter="blur(5px)" />
+        </EZGroup>
         <EZGroup layout="v" width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px"
             hJustify="center">
             <EZDrop @onGetDropFiles="onGetDropFiles" />
@@ -158,6 +167,7 @@ import EZConfirmDialog from '@/components/ezcore/EZConfirmDialog.vue';
 import EZFileBox from '@/components/ezcore/EZFileBox.vue';
 import EZColorPicker from '../components/ezcore/EZColorPicker.vue';
 import EZDatePicker from '../components/ezcore/EZDatePicker.vue';
+import EZSpinner from '../components/ezcore/EZSpinner.vue';
 const refDrops = ref(null)
 const refDialogOpen = ref(false)
 const refAlertDialogOpen = ref(false)
