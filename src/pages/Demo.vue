@@ -81,10 +81,10 @@
             <EZSpinner border="3px solid var(--theme-main)" filter="drop-shadow(0 0 5px var(--theme-main))" />
             <EZSpinner border="3px solid var(--theme-main)" filter="blur(5px)" />
         </EZGroup>
-        <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
+        <!-- <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
             gap="10px">
             <EZTextEdtitor />
-        </EZGroup>
+        </EZGroup> -->
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
             gap="10px">
             <EZCarousel width="100%" height="300px" bg="black">
@@ -205,7 +205,7 @@ import EZColorPicker from '@/components/ezcore/EZColorPicker.vue';
 import EZDatePicker from '@/components/ezcore/EZDatePicker.vue';
 import EZSpinner from '@/components/ezcore/EZSpinner.vue';
 import EZCarousel from '@/components/ezcore/EZCarousel.vue';
-import EZTextEdtitor from '@/components/ezcore/EZTextEdtitor/index.vue';
+// import EZTextEdtitor from '@/components/ezcore/EZTextEdtitor/index.vue';
 import EZRuleH from '@/components/ezcore/EZRuleH.vue';
 import EZRuleV from '@/components/ezcore/EZRuleV.vue';
 const refDrops = ref(null)
