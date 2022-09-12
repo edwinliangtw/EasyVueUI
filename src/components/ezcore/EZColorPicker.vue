@@ -106,7 +106,7 @@ const createMultiColorSpectrum = function () {
 }
 
 const hueClick = function (e) {
-    let y = e.pageY - getTop(e.currentTarget);
+    let y = e.pageY - getTop(e.currentTarget) - window.scrollY;
     const allColorContext = refAllColor.value.getContext('2d')
     let imgData = allColorContext.getImageData(0, y, 1, 1).data;
     createSingleColorSpectrum('rgb(' + imgData[0] + ', ' + imgData[1] + ', ' + imgData[2] + ')');
@@ -114,7 +114,7 @@ const hueClick = function (e) {
 
 const spectrumClick = function (e) {
     let x = e.pageX - getLeft(e.currentTarget) - 2;
-    let y = e.pageY - getTop(e.currentTarget);
+    let y = e.pageY - getTop(e.currentTarget) - window.scrollY;
     const singleColorContext = refSingleColor.value.getContext('2d')
     let imgData = singleColorContext.getImageData(x, y, 1, 1).data;
     refCurrentColor.value = 'rgb(' + imgData[0] + ', ' + imgData[1] + ', ' + imgData[2] + ')'

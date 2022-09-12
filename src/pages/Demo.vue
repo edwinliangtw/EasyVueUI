@@ -17,6 +17,9 @@
             <EZButton bg="#5DADE2" boxShadow="0 0 5px #5DADE2" padding="5px 10px" alignSelf="center">
                 <EZLabel size="1em" color="white">Blue</EZLabel>
             </EZButton>
+
+            <EZRuleV />
+
             <EZButton bg="var(--theme-main-light)" boxShadow="0 0 5px var(--theme-main-light)" padding="10px"
                 alignSelf="center">
                 <EZLabel size="1em" color="white">
@@ -32,21 +35,33 @@
                 <EZLabel size="1em" color="white">Show Dialog</EZLabel>
             </EZButton>
             <EZDialog v-if="refDialogOpen" @onClose="refDialogOpen=false" />
+
+            <EZRuleV />
+
             <EZButton boxShadow="0 0 5px var(--theme-main)" padding="5px 10px" alignSelf="center"
                 @click="refAlertDialogOpen=!refAlertDialogOpen">
                 <EZLabel size="1em" color="white">Show Alert Dialog</EZLabel>
             </EZButton>
             <EZAlertDialog v-if="refAlertDialogOpen" @onClose="refAlertDialogOpen=false" />
+
+            <EZRuleV />
+
             <EZButton boxShadow="0 0 5px var(--theme-main)" padding="5px 10px" alignSelf="center"
                 @click="refConfirmDialogOpen=!refConfirmDialogOpen">
                 <EZLabel size="1em" color="white">Show Confirm Dialog</EZLabel>
             </EZButton>
             <EZConfirmDialog v-if="refConfirmDialogOpen" @onClose="refConfirmDialogOpen=false" />
+
+            <EZRuleH />
+
             <EZButton boxShadow="0 0 5px var(--theme-main)" padding="5px 10px" alignSelf="center"
                 @click="refColorPickerOpen=!refColorPickerOpen">
                 <EZLabel size="1em" color="white">Show Color Picker</EZLabel>
             </EZButton>
             <EZColorPicker v-if="refColorPickerOpen" @onClose="onColor" />
+
+            <EZRuleV />
+
             <EZButton boxShadow="0 0 5px var(--theme-main)" padding="5px 10px" alignSelf="center"
                 @click="refDatePickerOpen=!refDatePickerOpen">
                 <EZLabel size="1em" color="white">Show Date Picker</EZLabel>
@@ -65,6 +80,10 @@
             <EZSpinner border="13px solid var(--theme-main)" />
             <EZSpinner border="3px solid var(--theme-main)" filter="drop-shadow(0 0 5px var(--theme-main))" />
             <EZSpinner border="3px solid var(--theme-main)" filter="blur(5px)" />
+        </EZGroup>
+        <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
+            gap="10px">
+            <EZTextEdtitor />
         </EZGroup>
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
             gap="10px">
@@ -91,7 +110,7 @@
             </EZGroup>
         </EZGroup>
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
-            gap="10px" overflow="scroll">
+            gap="10px">
             <EZTable border="1px dotted var(--theme-main)" width="400px" height="200px" minWidth="400px">
                 <tr>
                     <td>
@@ -186,6 +205,9 @@ import EZColorPicker from '@/components/ezcore/EZColorPicker.vue';
 import EZDatePicker from '@/components/ezcore/EZDatePicker.vue';
 import EZSpinner from '@/components/ezcore/EZSpinner.vue';
 import EZCarousel from '@/components/ezcore/EZCarousel.vue';
+import EZTextEdtitor from '@/components/ezcore/EZTextEdtitor/index.vue';
+import EZRuleH from '@/components/ezcore/EZRuleH.vue';
+import EZRuleV from '@/components/ezcore/EZRuleV.vue';
 const refDrops = ref(null)
 const refDialogOpen = ref(false)
 const refAlertDialogOpen = ref(false)
