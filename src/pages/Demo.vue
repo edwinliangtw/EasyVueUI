@@ -72,7 +72,7 @@
 
             <EZButton boxShadow="0 0 5px var(--theme-main)" padding="5px 10px" alignSelf="center"
                 @click="refTimePickerOpen=!refTimePickerOpen">
-                <EZLabel size="1em" color="white">Show Date Picker</EZLabel>
+                <EZLabel size="1em" color="white">Show Time Picker</EZLabel>
             </EZButton>
             <EZTimerPicker v-if="refTimePickerOpen" @onClose="onTime" />
 
