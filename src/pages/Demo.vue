@@ -81,10 +81,10 @@
             <EZSpinner border="3px solid var(--theme-main)" filter="drop-shadow(0 0 5px var(--theme-main))" />
             <EZSpinner border="3px solid var(--theme-main)" filter="blur(5px)" />
         </EZGroup>
-        <!-- <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
+        <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
             gap="10px">
-            <EZTextEdtitor />
-        </EZGroup> -->
+            <!-- <EZTextEdtitor /> -->
+        </EZGroup>
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
             gap="10px">
             <EZCarousel width="100%" height="300px" bg="black">

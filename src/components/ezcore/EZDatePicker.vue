@@ -94,7 +94,7 @@ const nextMonth = function (year, month, date) {
 
 const prevMonth = function (year, month, date) {
     month = month - 1;
-    if (month < 0) {
+    if (month < 1) {
         year -= 1;
         month = 12;
     }
