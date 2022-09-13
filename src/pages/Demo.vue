@@ -67,6 +67,15 @@
                 <EZLabel size="1em" color="white">Show Date Picker</EZLabel>
             </EZButton>
             <EZDatePicker v-if="refDatePickerOpen" @onClose="onDate" />
+
+            <EZRuleV />
+
+            <EZButton boxShadow="0 0 5px var(--theme-main)" padding="5px 10px" alignSelf="center"
+                @click="refTimePickerOpen=!refTimePickerOpen">
+                <EZLabel size="1em" color="white">Show Date Picker</EZLabel>
+            </EZButton>
+            <EZTimerPicker v-if="refTimePickerOpen" @onClose="onTime" />
+
         </EZGroup>
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
             gap="10px">
@@ -203,23 +212,31 @@ import EZConfirmDialog from '@/components/ezcore/EZConfirmDialog.vue';
 import EZFileBox from '@/components/ezcore/EZFileBox.vue';
 import EZColorPicker from '@/components/ezcore/EZColorPicker.vue';
 import EZDatePicker from '@/components/ezcore/EZDatePicker.vue';
+import EZTimerPicker from '@/components/ezcore/EZTimerPicker.vue';
 import EZSpinner from '@/components/ezcore/EZSpinner.vue';
 import EZCarousel from '@/components/ezcore/EZCarousel.vue';
 // import EZTextEdtitor from '@/components/ezcore/EZTextEdtitor/index.vue';
 import EZRuleH from '@/components/ezcore/EZRuleH.vue';
 import EZRuleV from '@/components/ezcore/EZRuleV.vue';
+
+
 const refDrops = ref(null)
 const refDialogOpen = ref(false)
 const refAlertDialogOpen = ref(false)
 const refConfirmDialogOpen = ref(false)
 const refColorPickerOpen = ref(false)
 const refDatePickerOpen = ref(false)
+const refTimePickerOpen = ref(false)
 function onColor(obj) {
     refColorPickerOpen.value = false;
     console.log(obj)
 }
 function onDate(obj) {
     refDatePickerOpen.value = false;
+    console.log(obj)
+}
+function onTime(obj) {
+    refTimePickerOpen.value = false;
     console.log(obj)
 }
 function onFile(obj) {
