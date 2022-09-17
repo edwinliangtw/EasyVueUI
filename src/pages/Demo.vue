@@ -91,8 +91,9 @@
             <EZSpinner border="3px solid var(--theme-main)" filter="blur(5px)" />
         </EZGroup>
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
-            gap="10px">
-            <!-- <EZTextEdtitor /> -->
+            vJustify="center" gap="30px">
+            <EZSliderV length="100px" min="1" max="5" />
+            <EZSliderH length="100px" min="0" max="10" />
         </EZGroup>
         <EZGroup width="100%" bg="var(--theme-main-light)" padding="10px" borderRadius="10px" hJustify="center"
             gap="10px">
@@ -218,7 +219,8 @@ import EZCarousel from '@/components/ezcore/EZCarousel.vue';
 // import EZTextEdtitor from '@/components/ezcore/EZTextEdtitor/index.vue';
 import EZRuleH from '@/components/ezcore/EZRuleH.vue';
 import EZRuleV from '@/components/ezcore/EZRuleV.vue';
-
+import EZSliderH from '@/components/ezcore/EZSliderH.vue';
+import EZSliderV from '../components/ezcore/EZSliderV.vue';
 
 const refDrops = ref(null)
 const refDialogOpen = ref(false)

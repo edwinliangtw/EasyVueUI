@@ -42,13 +42,13 @@ defineProps({
 })
 function close() {
     showSelection.value = false;
-    document.body.removeEventListener('click', close)
+    document.body.removeEventListener('mousedown', close)
 }
 function addOutsideEvent() {
-    document.body.addEventListener('click', close)
+    document.body.addEventListener('mousedown', close)
 }
 function removeOutsideEvent() {
-    document.body.removeEventListener('click', close)
+    document.body.removeEventListener('mousedown', close)
 }
 </script>
 

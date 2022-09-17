@@ -123,19 +123,19 @@ const spectrumClick = function (e) {
 }
 
 const getLeft = function (obj) {
-    var offset = obj.offsetLeft;
+    let offset = obj.offsetLeft;
     if (obj.offsetParent != null) offset += getLeft(obj.offsetParent);
     return offset;
 };
 
 const getTop = function (obj) {
-    var offset = obj.offsetTop;
+    let offset = obj.offsetTop;
     if (obj.offsetParent != null) offset += getTop(obj.offsetParent);
     return offset;
 };
 
 const componentToHex = (c) => {
-    var hex = c.toString(16);
+    const hex = c.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
 }
 

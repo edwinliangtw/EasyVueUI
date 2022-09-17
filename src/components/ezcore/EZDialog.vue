@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import { getCurrentInstance, onUnmounted } from 'vue';
+import { getCurrentInstance, onMounted, onUnmounted } from 'vue';
 import EZGroup from './EZGroup.vue';
 import EZLabel from './EZLabel.vue';
 const emit = defineEmits(['onClose'])
@@ -34,7 +34,13 @@ defineProps({
 })
 const $ez = getCurrentInstance().appContext.config.globalProperties.$ez
 $ez.dialogMode = true
-onUnmounted(() => $ez.dialogMode = false)
+onMounted(() => {
+    window.document.body.style.overflow = 'hidden';
+})
+onUnmounted(() => {
+    $ez.dialogMode = false
+    window.document.body.style.overflow = '';
+})
 </script>
 
 <style scoped>
