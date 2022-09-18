@@ -2,12 +2,12 @@ v0.2.2
 contextmenu
 tabpanel
 timePicker (OK)
-sliderH
-sliderV
+sliderH (OK)
+sliderV (OK)
 dataTable
 tree
 accordion
 
 [future]
 ui sound
-text edtitor
+text edtitor (v0.1)
